@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AngularCaritas"
+    }
+  },
+  "defaultProject": "AngularCaritas",
+  "cli": {
+    "analytics": false
+  }
 }
