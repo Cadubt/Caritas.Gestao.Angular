@@ -1,0 +1,14 @@
+.background{
+position: relative;
+height: 100vh;
+display: grid;
+
+grid-template-columns: 2fr minmax(300px, 1.5fr) 2fr;
+  // grid-template-rows: 1fr minmax(400px, 2fr) 1fr;
+align-items: center;
+justify-content: center;
+background-image: url(../../../assets/CaritasGestaoBG.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
