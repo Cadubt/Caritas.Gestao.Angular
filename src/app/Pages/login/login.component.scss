@@ -1,30 +1,88 @@
-.background{
-
+.background {
     position: relative;
     height: 100vh;
     display: grid;
     // grid-template-columns: 2fr minmax(300px, 1fr) 2fr;
     grid-template-columns: 2fr minmax(300px, 1.5fr) 2fr;
-    // grid-template-rows: 1fr minmax(400px, 2fr) 1fr;
+    grid-template-rows: 1fr minmax(400px, 2fr) 1fr;
     align-items: center;
     justify-content: center;
     background-image: url(src/assets/CaritasGestaoBG.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
 
-}
-.mat-card{
+.caritasLogo{
+    background-color: rgba(255, 255, 255, 0.274);
+     background-blend-mode: 0.2;
+      display: grid;
+      grid-column: 1/4;
+  }
+
+.boxBackground{
+    display: flex;
+    grid-row: 2/3;
     grid-column: 2/3;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.transbox {
+  display: grid;
+  grid-template-rows: 40px 50px 85px auto auto auto;
+  background-color: #ffffff75;
+    // border: 1px solid black;
+  text-align: center;
+  }
+
+h1 {
+  grid-row: 1/2;
+  margin: 2px;
+  font-weight: bold;
+  color: white;
+  text-justify: auto;
+  opacity: 1.0;
 }
 
-.example-card {
-    max-width: 400px;
-  }
-  
-  .example-header-image {
-    background-image: url(src/assets/logoBezerradeMenezes.png);
-    background-size: cover;
-  }
+h2 {
+    grid-row: 2/3;
+    margin: 2px;
+    font-weight: bold;
+    color: white;
+    text-justify: auto;
+    opacity: 1.0;
+}
+
+h3 {
+  grid-row: 6/7;
+  margin: 2px;
+  font-weight: bold;
+  color: white;
+  text-justify: auto;
+  opacity: 1.0;
+}
+.loginForm{
+  grid-row: 4/5;
+  padding-bottom: 15px;
+}
+
+.logoBezerra {
+  width: auto;
+  grid-row: 3/4;
+  align-content: center;
+}
+.example-container{
+  margin: 10px;
+}
+mat-form-field{
+  width: 65%;
+  background-color: white;
+  border-radius: 0%;
+}
+
+.btn {
+  grid-row: 5/6;
+}
+button{
+  width: 65%;
+}

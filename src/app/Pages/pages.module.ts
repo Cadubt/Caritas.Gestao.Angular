@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { LoginModule } from './login/login.module';
-import { MatCardModule } from '@angular/material/card';
+
+
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatButtonModule } from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
-  declarations: [
-    LoginModule,
-  ],
+  declarations: [],
   imports: [
-    MatCardModule,
+    CommonModule,
+    LoginModule,
+    MatInputModule,
     MatFormFieldModule,
-    MatButtonModule,
-  ]
+  ],
+  exports:[LoginModule]
 })
-
 export class PagesModule { }

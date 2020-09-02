@@ -5,8 +5,8 @@ import { LoginComponent } from './pages/login/login.component';
 const routes: Routes = [
 
   {
-  path: '',
-  component: LoginComponent,
+    path: '',
+    component: LoginComponent,
   },
 
 ];
@@ -14,7 +14,9 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),
+
+  ],
   exports: [RouterModule]
 })
 
