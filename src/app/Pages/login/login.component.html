@@ -4,37 +4,39 @@
     </div>
 
 
-        <div class="boxBackground">
-            <div class="transbox">
-                <h1>Bem vindo ao Cáritas!</h1>
-                <h2>Sistema de gestão de acolhidos</h2>
-                    <div class="logoBezerra">
-                        <img width="300px" alt="logoBezerradeMenezes" src="./assets/logoBezerradeMenezes.png">
-                    </div>
-
-                <form class="loginForm">
-                    <mat-form-field class="example-container">
-                        <input matInput placeholder="Usuário">
-                    </mat-form-field>
-
-                    <mat-form-field class="example-container">
-                        <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'">
-                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                            </button>
-                    </mat-form-field>
-
-                    <br>
-                    <br>
-
-                    <div class="btn">
-                        <button mat-raised-button color="Basic">Entrar</button>
-                    </div>
-
-                </form>
-                <h3>Esqueci minha senha</h3>
+    <div class="boxBackground">
+        <div class="transbox">
+            <div class="loginHeader">
+                <div class="textHeader">Bem vindo ao Cáritas!</div>
+                <div class="textTopic">Sistema de gestão de acolhidos da</div>
+                <div class="logoBezerra">
+                    <img class="logoLogin" alt="logoBezerradeMenezes" src="./assets/logoBezerradeMenezes.png">
+                </div>
             </div>
 
+            <form class="loginForm">
+                <mat-form-field class="example-container">
+                    <input matInput placeholder="Usuário">
+                </mat-form-field>
+
+                <mat-form-field class="example-container">
+                    <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+
+
+                <div class="btn">
+                    <button mat-raised-button color="Basic">Entrar</button>
+                </div>
+
+            </form>
+
+            <div class="textHeader">Esqueci minha senha</div>
         </div>
+
+    </div>
 
 </div>
