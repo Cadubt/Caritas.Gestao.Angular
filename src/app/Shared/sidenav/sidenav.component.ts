@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-
+  showFiller = false;
+  sidenavMenu = []
   constructor() { }
 
   ngOnInit(): void {
