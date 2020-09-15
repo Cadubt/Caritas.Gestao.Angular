@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
 import { HeaderModule } from './Shared/header/header/header.module';
 import { FooterModule } from './Shared/footer/footer.module';
+import { AuthService } from './pages/login/auth.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { FooterModule } from './Shared/footer/footer.module';
     HeaderModule,
     FooterModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
