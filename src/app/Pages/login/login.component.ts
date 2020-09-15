@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { EventEmitter } from '@angular/core';
+import { AuthService } from './auth.service';
+// import { RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +11,15 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   hide = true;
-  
-  constructor() { }
+  showMenu = false;
+
+  constructor(private AuthService: AuthService) { }
+
 
   ngOnInit(): void {
   }
 
+  fazerLogin(){
+this.AuthService.fazerLogin();
+  }
 }
