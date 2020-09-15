@@ -1,0 +1,25 @@
+.container{
+    grid-template-columns: 1fr minmax(920px, 4fr) 1fr;
+    background-color: rgba(227, 227, 228, 0.911)
+  }
+
+.card {
+    grid-column: 2/3;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .filterInput{
+      margin-bottom: 10px;
+  }
+.backButton{
+    width: 97%;
+    margin: auto;
+    align-content: flex-start;
+}

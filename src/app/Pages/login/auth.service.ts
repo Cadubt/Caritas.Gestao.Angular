@@ -17,4 +17,8 @@ export class AuthService {
     this.showMenuEmitter.emit(true);
     return this.router.navigate(['/dashboard'])
   }
+
+  hideMenu(){
+    return this.showMenuEmitter.emit(false);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from './pages/login/auth.service';
 
 @Component({
@@ -11,7 +11,6 @@ export class AppComponent {
   showMenu = false;
 
   constructor (
-    private changeDetectorRef: ChangeDetectorRef,
     private authService: AuthService,
   ) { }
 
