@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {MatTableDataSource} from '@angular/material/table';
-
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 export interface shelteredTable{
   name: string;
@@ -27,9 +28,10 @@ const ELEMENT_DATA: shelteredTable[] = [
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit  {
 
-
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   displayedColumns: string[] = ['shelteredId', 'name', 'surname', 'DOB'];
 
@@ -41,12 +43,16 @@ export class DashboardComponent implements OnInit {
   }
 
   constructor(
-    
+   
     ) { }
 
   ngOnInit(): void {
+    this.dataSource.paginator = this.paginator;
   }
 
+  ngAfterViewInit() {
 
+    this.dataSource.sort = this.sort;
+  }
 
 }

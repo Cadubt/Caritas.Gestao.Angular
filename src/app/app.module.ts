@@ -7,7 +7,7 @@ import { PagesModule } from './pages/pages.module';
 import { HeaderModule } from './Shared/header/header/header.module';
 import { FooterModule } from './Shared/footer/footer.module';
 import { AuthService } from './pages/login/auth.service';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,10 @@ import { AuthService } from './pages/login/auth.service';
     PagesModule,
     HeaderModule,
     FooterModule,
+    MatSidenavModule
+  ],
+  exports: [
+    MatSidenavModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@
             <input matInput (keyup)="applyFilter($event)" placeholder="Buscar Acolhido" #input>
           </mat-form-field>
           
-          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
           
             <!-- Position Column -->
             <ng-container matColumnDef="shelteredId">
@@ -44,6 +44,7 @@
             </tr>
           </table>
     </mat-card-content>
+    
     <mat-card-actions>
        <div class="backButton">
         <button mat-raised-button color="primary">Voltar</button>
