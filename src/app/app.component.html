@@ -1,7 +1,7 @@
 <app-header *ngIf="showMenu" (sidenavToggle)="sidenav.toggle()"></app-header>
 <mat-sidenav-container>
     <mat-sidenav #sidenav role="navigation">
-      <!--this is a place for us to add side-nav code-->
+        <app-sidenav (sidenavClose)="sidenav.close()"></app-sidenav> 
     </mat-sidenav>
     <mat-sidenav-content>
       <!--in here all the content must reside. We will add a navigation header as well-->

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  showFiller = false;
-  sidenavMenu = []
-  constructor() { }
+  @Output() sidenavClose = new EventEmitter();
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+  public onSidenavClose = () => {
+    this.sidenavClose.emit();
   }
 
 }

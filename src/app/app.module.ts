@@ -8,6 +8,7 @@ import { HeaderModule } from './Shared/header/header/header.module';
 import { FooterModule } from './Shared/footer/footer.module';
 import { AuthService } from './pages/login/auth.service';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { SidenavModule } from '../app/Shared/sidenav/sidenav.module';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     PagesModule,
     HeaderModule,
     FooterModule,
-    MatSidenavModule
+    MatSidenavModule,
+    SidenavModule,
   ],
   exports: [
     MatSidenavModule,
+    SidenavModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
