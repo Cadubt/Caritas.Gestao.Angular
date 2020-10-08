@@ -12,13 +12,14 @@
                         <img width="300px" alt="logoBezerradeMenezes" src="./assets/logoBezerradeMenezes.png">
                     </div>
 
-                <form class="loginForm">
+                <form class="loginForm" [formGroup]="loginForm">
                     <mat-form-field class="example-container">
-                        <input matInput placeholder="Usuário">
+                        <input matInput placeholder="Usuário" formControlName="userName">
                     </mat-form-field>
 
                     <mat-form-field class="example-container">
-                        <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'">
+                        <input matInput
+                        formControlName="password" placeholder="Senha" [type]="hide ? 'password' : 'text'">
                             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" >
                                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                             </button>
@@ -29,7 +30,7 @@
                     <br>
 
                     <div class="btn">
-                        <button mat-raised-button color="Basic" (click)="fazerLogin()">Entrar</button>
+                        <button mat-raised-button color="Basic" (click)="authenticate()">Entrar</button>
                     </div>
 
                 </form>
