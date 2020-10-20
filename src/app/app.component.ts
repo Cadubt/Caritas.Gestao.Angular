@@ -8,7 +8,7 @@ import { AuthService } from './pages/login/auth.service';
 })
 export class AppComponent {
   title = 'Caritas Gestão';
-  showMenu = false;
+  showMenu;
 
   constructor (
     private authService: AuthService,

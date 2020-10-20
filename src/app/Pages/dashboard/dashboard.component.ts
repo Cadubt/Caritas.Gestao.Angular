@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 export interface shelteredTable{
   name: string;
@@ -19,8 +20,8 @@ const ELEMENT_DATA: shelteredTable[] = [
   {shelteredId: 6, name: 'Judas', surname: 'Schmidt', DOB: '01/01/1940', },
   {shelteredId: 7, name: 'Felipe', surname: 'de la Vega', DOB: '01/01/1940', },
   {shelteredId: 8, name: 'João Batista', surname: 'Martinez', DOB: '01/01/1940', },
-  {shelteredId: 9, name: 'Honda', surname: 'Nakasone', DOB: '01/01/1940', },
-  {shelteredId: 10, name: 'Andrea', surname: 'Corleone', DOB: '01/01/1940', },
+  // {shelteredId: 9, name: 'Honda', surname: 'Nakasone', DOB: '01/01/1940', },
+  // {shelteredId: 10, name: 'Andrea', surname: 'Corleone', DOB: '01/01/1940', },
 ];
 
 @Component({
@@ -43,7 +44,7 @@ export class DashboardComponent implements OnInit  {
   }
 
   constructor(
-   
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -53,6 +54,10 @@ export class DashboardComponent implements OnInit  {
   ngAfterViewInit() {
 
     this.dataSource.sort = this.sort;
+  }
+
+  goToNewShelteredAppointmentForm(){
+    this.router.navigate(['/new-sheltered-appointment'])
   }
 
 }

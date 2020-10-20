@@ -5,4 +5,9 @@
 mat-sidenav {
     width: 250px;
     height: 100%;
+    overflow: scroll;
+}
+mat-sidenav-container{
+    height: max-content;
+    overflow-y: scroll;
 }

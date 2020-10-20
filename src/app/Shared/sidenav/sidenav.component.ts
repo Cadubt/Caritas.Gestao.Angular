@@ -17,4 +17,14 @@ export class SidenavComponent implements OnInit {
     this.sidenavClose.emit();
   }
 
+  goToNewShelteredAppointmentForm(){
+    this.router.navigate(['/new-sheltered-appointment']);
+    this.onSidenavClose();
+  }
+
+  goToDashboard(){
+    this.router.navigate(['/dashboard']);
+    this.onSidenavClose();
+  }
+
 }

@@ -13,6 +13,8 @@ export class AuthService {
 
   public showMenuEmitter = new EventEmitter<boolean>();
 
+  isMenuShowing = true;
+
   constructor(
     private router: Router,
   ) { }
@@ -22,6 +24,7 @@ export class AuthService {
 
   fazerLogin(){
     this.showMenuEmitter.emit(true);
+    this.isMenuShowing = true;
     return this.router.navigate(['/dashboard'])
   }
 

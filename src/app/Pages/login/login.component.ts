@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 import { AuthService } from './auth.service';
 // import { RouterModule, Routes } from '@angular/router';
@@ -14,7 +14,7 @@ const API_URL = environment.BASE_URL_API;
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterViewInit {
   loginForm: FormGroup;
   hide = true;
   showMenu = false;
@@ -29,9 +29,15 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.AuthService.hideMenu();
+    this.AuthService.isMenuShowing = false;
     this.createForm();
   }
 
+  ngAfterViewInit(){
+    this.AuthService.hideMenu();
+    this.AuthService.isMenuShowing = false;
+  }
+  
   fazerLogin(){
     
 this.AuthService.fazerLogin();
@@ -45,24 +51,25 @@ password: [null, [Validators.required]]
   }
 
 authenticate( ) {
-  const userName = this.loginForm.get('userName').value;
-  const options = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    }),
-    body: userName
-  };
-  this.http.get(API_URL + 'api/User/GetUser', options).subscribe((res: any) => {
-  console.log("deu certo esssa bagaça: ", res.data)
+  this.AuthService.fazerLogin();
+  // const userName = this.loginForm.get('userName').value;
+  // const options = {
+  //   headers: new HttpHeaders({
+  //     'Content-Type': 'application/json'
+  //   }),
+  //   body: userName,
+  // };
+  // this.http.get(API_URL + 'api/User/GetUser/' + userName).subscribe((res: any) => {
+  // console.log("deu certo esssa bagaça: ", res.data)
 
-  }, err => {
-    this.snackbar.open(
-      'nada a ver brow, acerta o nome aew',
-      'Dismiss',
-      { horizontalPosition: 'right', verticalPosition: 'top', duration: 4000 });
-    this.loginForm.controls['userName'].reset();
-    this.loginForm.controls['password'].reset();
-  })
+  // }, err => {
+  //   this.snackbar.open(
+  //     'nada a ver brow, tenta denovo',
+  //     'Tendeu',
+  //     { horizontalPosition: 'right', verticalPosition: 'top', duration: 4000 });
+  //   this.loginForm.controls['userName'].reset();
+  //   this.loginForm.controls['password'].reset();
+  // })
 }
 
 

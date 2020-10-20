@@ -1,6 +1,7 @@
 .container{
     grid-template-columns: 1fr minmax(920px, 4fr) 1fr;
-    background-color: rgba(227, 227, 228, 0.911)
+    background-color: rgba(227, 227, 228, 0.911);
+    max-height: 550px;
   }
 
 .card {
@@ -22,4 +23,17 @@
     width: 97%;
     margin: auto;
     align-content: flex-end;
+}
+mat-icon{
+  font-size: 36px;
+}
+.add_box {
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+    margin-left: auto;
+    margin-right: 8px;
+    font-size: 36px;
 }
