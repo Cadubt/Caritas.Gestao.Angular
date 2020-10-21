@@ -14,23 +14,24 @@
                 </div>
             </div>
 
-            <form class="loginForm">
-                <mat-form-field class="example-container">
-                    <input matInput placeholder="Usuário">
-                </mat-form-field>
+                <form class="loginForm" [formGroup]="loginForm">
+                    <mat-form-field class="example-container">
+                        <input matInput placeholder="Usuário" formControlName="userName">
+                    </mat-form-field>
 
-                <mat-form-field class="example-container">
-                    <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'">
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                        [attr.aria-pressed]="hide">
-                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
-                </mat-form-field>
+                    <mat-form-field class="example-container">
+                        <input matInput
+                        formControlName="password" placeholder="Senha" [type]="hide ? 'password' : 'text'">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" >
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                            
+                    </mat-form-field>
 
 
-                <div class="btn">
-                    <button mat-raised-button color="Basic">Entrar</button>
-                </div>
+                    <div class="btn">
+                        <button mat-raised-button color="Basic" (click)="authenticate()">Entrar</button>
+                    </div>
 
             </form>
 

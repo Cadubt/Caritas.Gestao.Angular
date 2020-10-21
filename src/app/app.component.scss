@@ -1,1 +1,13 @@
 
+// mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+//     height: 100%;
+// }
+mat-sidenav {
+    width: 250px;
+    height: 100%;
+    overflow: scroll;
+}
+mat-sidenav-container{
+    height: max-content;
+    overflow-y: scroll;
+}
