@@ -6,11 +6,17 @@ mat-form-field, mat-form-field-wrapper, mat-form-field-flex {
     background-color: white;
   }
 
-
-
   .container{
-    width: 100%;
+    grid-template-columns: 1fr minmax(920px, 4fr) 1fr;
+    background-color: rgba(227, 227, 228, 0.911);
+    max-height: 550px;
   }
+
+.card {
+    grid-column: 2/3;
+  }
+  
+
 
   form{
     display: grid;
