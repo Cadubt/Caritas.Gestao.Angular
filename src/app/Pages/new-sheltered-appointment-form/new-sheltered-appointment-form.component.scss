@@ -9,11 +9,12 @@ mat-form-field, mat-form-field-wrapper, mat-form-field-flex {
   .container{
     grid-template-columns: 1fr minmax(920px, 4fr) 1fr;
     background-color: rgba(227, 227, 228, 0.911);
-    max-height: 550px;
+    max-height: fit-content;
   }
 
 .card {
     grid-column: 2/3;
+    max-height: fit-content;
   }
   
 
@@ -22,7 +23,8 @@ mat-form-field, mat-form-field-wrapper, mat-form-field-flex {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 15px;
+    max-height: fit-content;
+    // grid-gap: 5px;
   }
 
 //   <<<<<< FORM >>>>>>
@@ -91,12 +93,12 @@ mat-form-field, mat-form-field-wrapper, mat-form-field-flex {
 }
 
 .interviewDate {
-    grid-column: 1/2;
+    grid-column: 3/4;
     grid-row: 6/7;
 }
 
 .obs {
-    grid-column: 2/4;
+    grid-column: 1/3;
     grid-row: 6/7;
 }
 

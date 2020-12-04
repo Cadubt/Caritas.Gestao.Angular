@@ -22,11 +22,29 @@ shelteredAppointment: FormGroup;
 
   createForm(){
     this.shelteredAppointment = this.formBuilder.group({
-      edit: false,
-      date: [null],
-      time: [null],
-      message: [null],
+      ShelteredName: [null],
+      ShelteredAge:[null],
+      ShelteredPhone: [null],
+      Id: [null],
+      ShelteredAddress: [null],
+      ShelteredAddressNumber: [null],
+      ShelteredAddressZipCode: [null],
+      ResponsibleName: [null],
+      KinshipId: [null],
+      ResponsiblePhone: [null],
+      ResponsibleAddress: [null],
+      ResponsibleAddressNumber: [null],
+      ResponsibleAddressZipCode: [null],
+      InterviewDate: [null],
+      ScheduleDate: [null],
+      Observation: [null],
+      ScheduleResponsible: [null],
+      CreatedAt: [null],
+      DeletedAt: [null],
       })
   }
 
+  onSubmit(){
+    console.log(this.shelteredAppointment)
+  }
 }

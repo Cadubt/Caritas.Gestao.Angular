@@ -5,81 +5,81 @@
         <mat-card-subtitle>Formulário para agendamento com a assistente social</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <form>
+        <form [formGroup]="shelteredAppointment">
 
           <mat-form-field class='registrationDate'>
             <mat-label>Data de cadastro</mat-label>
-            <input matInput [matDatepicker]="date" >
+            <input formControlName="ScheduleDate" matInput [matDatepicker]="date" >
             <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
             <mat-datepicker #date ></mat-datepicker>
           </mat-form-field>
 
           <mat-form-field class='shelteredName'>
-            <input matInput placeholder="Nome do acolhido">
+            <input matInput placeholder="Nome do acolhido" formControlName="ShelteredName">
           </mat-form-field>
 
           <mat-form-field class='shelteredAge'>
-            <input matInput placeholder="Idade do acolhido">
+            <input matInput placeholder="Idade do acolhido" formControlName="ShelteredAge">
           </mat-form-field>
 
           <mat-form-field class='shelteredPhone'>
-            <input matInput placeholder="Telefone do acolhido">
+            <input matInput placeholder="Telefone do acolhido" formControlName="ShelteredPhone">
           </mat-form-field>
 
           <mat-form-field class='shelteredAddress'>
-            <input matInput placeholder="Logradouro">
+            <input matInput placeholder="Logradouro" formControlName="ShelteredAddress">
           </mat-form-field>
 
           <mat-form-field class='shelteredAddressNumber'>
-            <input matInput placeholder="Número e Complemento">
+            <input matInput placeholder="Número e Complemento" formControlName="ShelteredAddressNumber">
           </mat-form-field>
 
           <mat-form-field class='shelteredAddressCEP'>
-            <input matInput placeholder="CEP">
+            <input matInput placeholder="CEP" formControlName="ShelteredAddressZipCode">
           </mat-form-field>
 
           <mat-form-field class='responsibleName'>
-            <input matInput placeholder="Nome do responsável">
+            <input matInput placeholder="Nome do responsável" formControlName="ResponsibleName">
           </mat-form-field>
 
           <mat-form-field class='relativeness'>
-            <input matInput placeholder="grau de parentesco">
+            <input matInput placeholder="grau de parentesco" formControlName="KinshipId">
           </mat-form-field>
 
           <mat-form-field class='responsiblePhone'>
-            <input matInput placeholder="Telefone do responsável">
+            <input matInput placeholder="Telefone do responsável" formControlName="ResponsiblePhone">
           </mat-form-field>
 
           <mat-form-field class='responsibleAddress'>
-            <input matInput placeholder="Endereço do Responsável">
+            <input matInput placeholder="Endereço do Responsável" formControlName="ResponsibleAddress">
           </mat-form-field>
 
           <mat-form-field class='responsibleAddressNumber'>
-            <input matInput placeholder="Número e Complemento">
+            <input matInput placeholder="Número e Complemento" formControlName="ResponsibleAddressNumber">
           </mat-form-field>
 
           <mat-form-field class='responsibleAddressCEP'>
-            <input matInput placeholder="CEP">
+            <input matInput placeholder="CEP" formControlName="ResponsibleAddressZipCode">
           </mat-form-field>
 
           <mat-form-field class='interviewDate'>
             <mat-label>Data da entrevista</mat-label>
-            <input matInput [matDatepicker]="interviewDate" >
+            <input matInput [matDatepicker]="interviewDate" formControlName="InterviewDate">
             <mat-datepicker-toggle matSuffix [for]="interviewDate"></mat-datepicker-toggle>
             <mat-datepicker #interviewDate ></mat-datepicker>
           </mat-form-field>
 
           <mat-form-field class='obs'>
-            <input matInput placeholder="Observações">
+            <textarea matInput placeholder="Observações" formControlName="Observation"></textarea>
           </mat-form-field>
 
           <mat-form-field class='AppointmentResponsible'>
-            <input matInput placeholder="Responsável pelo Agendamento">
+            <input matInput placeholder="Responsável pelo Agendamento" formControlName="ScheduleResponsible">
           </mat-form-field>
   
             <div class="send">
               <button class="sendButton" mat-raised-button
-                color="primary">Enviar</button>
+                color="primary" (click)="onSubmit()">Enviar</button>
             </div>
   
           </form>
