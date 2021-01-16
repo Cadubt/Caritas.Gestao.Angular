@@ -1,61 +1,71 @@
-.container{
-    grid-template-columns: 1fr minmax(920px, 4fr) 1fr;
-    background-color: rgba(227, 227, 228, 0.911);
-    max-height: 550px;
-  }
-.title{
+.container {
+  // grid-template-columns: 1fr minmax(920px, 4fr) 1fr;
+  background-color: rgba(227, 227, 228, 0.911);
+  max-height: 550px;
+  align-self: center;
+}
+
+.stick {
+  max-width: 80%;
+}
+
+.title {
   grid-column: 2/3;
   grid-row: 1/2;
-  width: 50%;
-  display: block;
-  height: 20px;
-}
-.titleH2{
   width: 100%;
+  display: block;
+  height: 50px;
 }
-.subtitle{
-  grid-column: 2/3;
-  grid-row: 2/3;
-  width: 50%;
-  line-break: normal;
+.titleH2 {
+  width: 100%;
+  
+}
+
+.subtitle {  
   display: flex;
+  margin-bottom: 20px;
 }
 
 .card {
-    grid-column: 2/3;
-  }
-  
-  table {
-    width: 50%;
-  }
-  
-  .mat-form-field {
-    font-size: 14px;
-    width: 50%;
-  }
-  .filterInput{
-      margin-bottom: 10px;
-      border-color: white;
-  }
-.backButton{
-    width: 97%;
-    margin: auto;
-    align-content: flex-end;
+  grid-column: 2/3;
 }
-mat-icon{
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.filterInput {
+  margin-bottom: 10px;
+  border-color: white;
+}
+.backButton {
+  width: 97%;
+  margin: auto;
+  align-content: flex-end;
+}
+mat-icon {
   font-size: 36px;
 }
 .add_box {
   margin-left: auto;
   max-height: 50px;
-    font-size: 16px;
-    // background-image: url(./../../../assets/CaritasGestaoBG.png);
-    color: white;
-    // opacity: 0.7;
-    background-image: 
-    linear-gradient(to right, rgba(18, 18, 155, 0.883) 10%, rgb(38, 38, 114) 90%);
+  font-size: 16px;
+  // background-image: url(./../../../assets/CaritasGestaoBG.png);
+  color: white;
+  // opacity: 0.7;
+  background-image: linear-gradient(to right, rgba(18, 18, 155, 0.883) 10%, rgb(38, 38, 114) 90%);
 }
-.shelteredTable{
+.shelteredTable {
   height: 100px;
   overflow-x: scroll;
+}
+
+@media screen and (max-width: 1900px) {
+  .stick {
+    max-width: 100%;
+  }
 }

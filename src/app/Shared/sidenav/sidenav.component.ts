@@ -27,4 +27,9 @@ export class SidenavComponent implements OnInit {
     this.onSidenavClose();
   }
 
+  goToAdmin(){
+    this.router.navigate(['/admin']);
+    this.onSidenavClose();
+  }
+
 }
