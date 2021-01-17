@@ -7,10 +7,11 @@
   grid-template-rows: 1fr minmax(300px, 2fr) 1fr;
   align-items: center;
   justify-content: center;
-  background-image: url(src/assets/CaritasGestaoBG.png);
+  // background-image: url(src/assets/CaritasGestaoBG.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: linear-gradient(#0f04a9, #330152);  
 }
 
 .caritasLogo{

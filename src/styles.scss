@@ -8,8 +8,12 @@ body {
   font-weight: normal;
 }
 
-
-
+.mat-list-item{
+  color:#e4ddf7 !important;
+}
+.mat-drawer-inner-container{
+  background-image: linear-gradient(#0f04a9, #330152);  
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
