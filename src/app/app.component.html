@@ -1,5 +1,15 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-header *ngIf="showMenu" 
 
+></app-header>
+<mat-sidenav-container>
+    <mat-sidenav *ngIf="showMenu" #sidenav mode="side" opened role="navigation">
+        <app-sidenav ></app-sidenav> 
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <!--in here all the content must reside. We will add a navigation header as well-->
 
+        <router-outlet></router-outlet>
 
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <app-footer *ngIf="showMenu"></app-footer>

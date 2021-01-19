@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "har-validator": "^5.1.5",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

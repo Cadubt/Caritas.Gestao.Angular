@@ -8,8 +8,12 @@ body {
   font-weight: normal;
 }
 
-
-
+.mat-list-item{
+  color:#e4ddf7 !important;
+}
+.mat-drawer-inner-container{
+  background-image: linear-gradient(#0f04a9, #330152);  
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -71,8 +75,9 @@ table tr.mat-header-row {
 
 .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
   border: 1px solid gray;
-  border-radius: 0px;
+  border-radius: 4px;
   padding-left: 0.5rem;
+  display: flex;
   box-shadow: inset 0px 1px 3px lightgray;
   box-sizing: border-box;
   background-color: white;
