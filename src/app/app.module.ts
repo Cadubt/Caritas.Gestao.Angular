@@ -10,7 +10,6 @@ import { AuthService } from './pages/login/auth.service';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavModule } from '../app/Shared/sidenav/sidenav.module';
 import { HttpClientModule } from '@angular/common/http';
-import { AdminComponent } from './Pages/admin/admin.component';
 
 @NgModule({
   declarations: [
