@@ -3,6 +3,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
+import { ShelteredService } from 'src/app/sheltered.service';
 
 export interface shelteredTable{
   name: string;
@@ -38,17 +39,21 @@ export class DashboardComponent implements OnInit  {
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
+  shelt: Array<any> = new Array();
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
   constructor(
+    private shelteredService: ShelteredService,
     private router: Router
     ) { }
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
+    this.listSheltered();
   }
 
   ngAfterViewInit() {
@@ -60,4 +65,26 @@ export class DashboardComponent implements OnInit  {
     this.router.navigate(['/new-sheltered-appointment'])
   }
 
+  listSheltered(){
+    var cadu = (this.shelteredService.listShelteredServ());
+
+    var gandalf = {
+      "real name": "Gandalf",
+      "age (est)": 11000,
+      "race": "Maia",
+      "haveRetirementPlan": true,
+      "aliases": [
+        "Greyhame",
+        "Stormcrow",
+        "Mithrandir",
+        "Gandalf the Grey",
+        "Gandalf the White"
+      ]
+    };
+
+    alert(JSON.stringify(cadu));
+
+    console.log(cadu);
+    
+  }
 }
