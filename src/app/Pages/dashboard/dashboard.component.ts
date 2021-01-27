@@ -6,23 +6,23 @@ import { Router } from '@angular/router';
 import { ShelteredService } from 'src/app/sheltered.service';
 
 export interface shelteredTable{
+  address: string;
+  age: number;
+  birthDate: string;
+  bloodTyping: string;
+  createdAt: string;
+  deceaseAt: string;
+  deletedAt: string;
+  entryDate: string;
+  id: number;
   name: string;
-  surname: string;
-  shelteredId: number;
-  DOB: string;
+  perfilImage: string;
+  phone: string;
+  statusId: number;
 }
 
 const ELEMENT_DATA: shelteredTable[] = [
-  {shelteredId: 1, name: 'José', surname: 'Silva', DOB: '01/01/1940', },
-  {shelteredId: 2, name: 'João', surname: 'Souza', DOB: '01/01/1940', },
-  {shelteredId: 3, name: 'Pedro', surname: 'Oliveira', DOB: '01/01/1940',},
-  {shelteredId: 4, name: 'Tiago', surname: 'Almeida', DOB: '01/01/1940', },
-  {shelteredId: 5, name: 'Tadeu', surname: 'Rocha', DOB: '01/01/1940', },
-  {shelteredId: 6, name: 'Judas', surname: 'Schmidt', DOB: '01/01/1940', },
-  {shelteredId: 7, name: 'Felipe', surname: 'de la Vega', DOB: '01/01/1940', },
-  {shelteredId: 8, name: 'João Batista', surname: 'Martinez', DOB: '01/01/1940', },
-  // {shelteredId: 9, name: 'Honda', surname: 'Nakasone', DOB: '01/01/1940', },
-  // {shelteredId: 10, name: 'Andrea', surname: 'Corleone', DOB: '01/01/1940', },
+  
 ];
 
 @Component({
@@ -38,9 +38,7 @@ export class DashboardComponent implements OnInit  {
   displayedColumns: string[] = ['shelteredId', 'name', 'surname', 'DOB'];
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
-
-  shelt: Array<any> = new Array();
-
+  
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -66,25 +64,6 @@ export class DashboardComponent implements OnInit  {
   }
 
   listSheltered(){
-    var cadu = (this.shelteredService.listShelteredServ());
-
-    var gandalf = {
-      "real name": "Gandalf",
-      "age (est)": 11000,
-      "race": "Maia",
-      "haveRetirementPlan": true,
-      "aliases": [
-        "Greyhame",
-        "Stormcrow",
-        "Mithrandir",
-        "Gandalf the Grey",
-        "Gandalf the White"
-      ]
-    };
-
-    alert(JSON.stringify(cadu));
-
-    console.log(cadu);
-    
+    this.shelteredService.listShelteredServ()    
   }
 }
