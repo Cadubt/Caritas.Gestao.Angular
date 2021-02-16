@@ -13,6 +13,7 @@ import { SidenavModule } from '../app/Shared/sidenav/sidenav.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ShelteredService } from './sheltered.service';
+import { SidenavMenuService  } from './Shared/sidenav/sidenav-menu.service'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { ShelteredService } from './sheltered.service';
     MatSidenavModule,
     SidenavModule
   ],
-  providers: [AuthService, HttpClientModule, ShelteredService],
+  providers: [AuthService, HttpClientModule, ShelteredService, SidenavMenuService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
