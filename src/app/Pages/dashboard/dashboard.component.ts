@@ -21,23 +21,23 @@ export interface shelteredTable{
   statusId: number;
 }
 
-const ELEMENT_DATA: shelteredTable[] = [
-  
-];
+const ELEMENT_DATA: shelteredTable [] = [];
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit  {
+export class DashboardComponent implements OnInit, AfterViewInit  {
+
+  shelteredTable: Array<shelteredTable> = []
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  displayedColumns: string[] = ['shelteredId', 'name', 'surname', 'DOB'];
+  displayedColumns: string[] = ['id', 'name', 'age', 'birthDate'];
 
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  dataSource = new MatTableDataSource();
   
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -51,11 +51,11 @@ export class DashboardComponent implements OnInit  {
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
-    this.listSheltered();
+    this.getShelteredList();
   }
 
   ngAfterViewInit() {
-
+    this.getShelteredList();
     this.dataSource.sort = this.sort;
   }
 
@@ -63,7 +63,10 @@ export class DashboardComponent implements OnInit  {
     this.router.navigate(['/new-sheltered-appointment'])
   }
 
-  listSheltered(){
-    this.shelteredService.listShelteredServ()    
+  getShelteredList(){
+    this.shelteredService.getShelteredList().subscribe((res: any) => {
+      this.shelteredTable = res.data;
+      this.dataSource = new MatTableDataSource(this.shelteredTable)
+    })    
   }
 }

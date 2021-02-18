@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { SidenavMenuService } from './sidenav-menu.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,28 +9,27 @@ import { Router } from '@angular/router';
 })
 export class SidenavComponent implements OnInit {
   @Output() sidenavClose = new EventEmitter();
+  menuList;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private service: SidenavMenuService) { }
 
   ngOnInit(): void {
+    this.getMenuList()
   }
   public onSidenavClose = () => {
     this.sidenavClose.emit();
   }
 
-  goToNewShelteredAppointmentForm(){
-    this.router.navigate(['/new-sheltered-appointment']);
+  navigateTo(pageName){
+    this.router.navigate([`/${pageName}`]);
     this.onSidenavClose();
   }
 
-  goToDashboard(){
-    this.router.navigate(['/dashboard']);
-    this.onSidenavClose();
-  }
-
-  goToAdmin(){
-    this.router.navigate(['/admin']);
-    this.onSidenavClose();
+  getMenuList(){
+    this.service.getMenuList().subscribe((res: any) => {
+    this.menuList = res.data
+    }) 
   }
 
 }

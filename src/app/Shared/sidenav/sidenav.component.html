@@ -1,41 +1,5 @@
 <mat-nav-list>
-  <a mat-list-item routerLink="/dashboard" (click)="goToDashboard()">
-    <mat-icon>dashboard</mat-icon> <span class="nav-caption">Dashboard</span>
-  </a>
-  <a mat-list-item routerLink="/owner" (click)="goToNewShelteredAppointmentForm()">
-    <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Novo Acolhido</span>   
-  </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>assignment_ind</mat-icon><span class="nav-caption">Recepção</span>
-  </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>loyalty</mat-icon><span class="nav-caption">Assistente Social</span>
-  </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>add_circle</mat-icon><span class="nav-caption">Enfermagem</span>
-  </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>settings</mat-icon><span class="nav-caption">Médico</span>
-  </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>settings</mat-icon><span class="nav-caption">Psicologia</span>
-  </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>healing</mat-icon><span class="nav-caption">Farmácia</span>
-  </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>settings</mat-icon><span class="nav-caption">Fisioterapeuta</span>
-  </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>settings</mat-icon><span class="nav-caption">Orientador Social</span>
-  </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>settings</mat-icon><span class="nav-caption">Diretoria</span>
-  </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>settings</mat-icon><span class="nav-caption">Portaria</span>
-  </a>
-  <a mat-list-item routerLink="/admin" (click)="goToAdmin()">
-    <mat-icon>settings</mat-icon><span class="nav-caption">Configurações</span>
+  <a mat-list-item *ngFor="let menu of menuList" (click)="navigateTo(menu.pageName)">
+    <mat-icon>{{menu.menuIcon}}</mat-icon> <span class="nav-caption">{{menu.menuTittle}}</span>
   </a>
 </mat-nav-list>
