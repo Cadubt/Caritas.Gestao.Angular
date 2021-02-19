@@ -1,7 +1,9 @@
+// <<<<<<<<<<<<<<<<<<< GERAL >>>>>>>>>>>>>>>>>>>>>>>>>
+
 .container {
   // grid-template-columns: 1fr minmax(920px, 4fr) 1fr;
   background-color: rgba(227, 227, 228, 0.911);
-  max-height: 550px;
+  max-height: fit-content;
   align-self: center;
 }
 
@@ -26,30 +28,15 @@
   margin-bottom: 20px;
 }
 
-.card {
-  grid-column: 2/3;
-}
-
-table {
-  width: 100%;
-}
-
 .mat-form-field {
   font-size: 14px;
   width: 100%;
 }
 .filterInput {
-  margin-bottom: 10px;
+  margin-bottom: 2.5rem;
   border-color: white;
 }
-.backButton {
-  width: 97%;
-  margin: auto;
-  align-content: flex-end;
-}
-mat-icon {
-  font-size: 36px;
-}
+
 .add_box {
   margin-left: auto;
   max-height: 50px;
@@ -59,13 +46,71 @@ mat-icon {
   // opacity: 0.7;
   background-image: linear-gradient(to right, rgba(18, 18, 155, 0.883) 10%, rgb(38, 38, 114) 90%);
 }
-.shelteredTable {
-  height: 100px;
-  overflow-x: scroll;
+// <<<<<<<<<<<<<<<<<<< Cards >>>>>>>>>>>>>>>>>>>>>>>>>
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
 }
+
+.shelteredCard {
+  max-width: 270px;
+  min-width: 250px;
+  height: 435px;
+  margin: 0 1rem 2.5rem;
+}
+
+.cardHeader{
+  grid: block;
+}
+
+.photo {
+  height: 10rem;
+}
+
+.shelteredName {
+  margin: 0;
+  padding: 0;
+}
+
+.shelteredAge {
+  margin: 0;
+  padding: 0;
+}
+
+.infoGrid{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 5px;
+}
+
+.title{
+  font-weight: 700;
+  margin: 0;
+  height: fit-content;
+}
+
+// <<<<<<<<<<<<<<<<<<< Responsive >>>>>>>>>>>>>>>>>>>>>>>>>
+
+
 
 @media screen and (max-width: 1900px) {
   .stick {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .shelteredCard {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .stick {
+    max-width: 80%;
   }
 }
