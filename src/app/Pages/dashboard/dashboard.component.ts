@@ -30,18 +30,12 @@ const ELEMENT_DATA: shelteredTable [] = [];
 })
 export class DashboardComponent implements OnInit, AfterViewInit  {
 
-  shelteredTable: Array<shelteredTable> = []
+  shelteredTable;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-
-  displayedColumns: string[] = ['id', 'name', 'age', 'birthDate'];
-
-  dataSource = new MatTableDataSource();
   
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.shelteredTable.filter = filterValue.trim().toLowerCase();
   }
 
   constructor(
@@ -50,13 +44,11 @@ export class DashboardComponent implements OnInit, AfterViewInit  {
     ) { }
 
   ngOnInit(): void {
-    this.dataSource.paginator = this.paginator;
     this.getShelteredList();
   }
 
   ngAfterViewInit() {
     this.getShelteredList();
-    this.dataSource.sort = this.sort;
   }
 
   goToNewShelteredAppointmentForm(){
@@ -66,7 +58,6 @@ export class DashboardComponent implements OnInit, AfterViewInit  {
   getShelteredList(){
     this.shelteredService.getShelteredList().subscribe((res: any) => {
       this.shelteredTable = res.data;
-      this.dataSource = new MatTableDataSource(this.shelteredTable)
     })    
   }
 }
