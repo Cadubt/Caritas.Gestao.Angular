@@ -3,45 +3,30 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
-import { ShelteredService } from 'src/app/sheltered.service';
+import { ShelteredService } from 'src/app/Core/sheltered.service';
+import { ShelteredModel } from 'src/app/Models/shelteredModel';
 
-export interface shelteredTable{
-  address: string;
-  age: number;
-  birthDate: string;
-  bloodTyping: string;
-  createdAt: string;
-  deceaseAt: string;
-  deletedAt: string;
-  entryDate: string;
-  id: number;
-  name: string;
-  perfilImage: string;
-  phone: string;
-  statusId: number;
-}
 
-const ELEMENT_DATA: shelteredTable [] = [];
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit, AfterViewInit  {
+export class DashboardComponent implements OnInit, AfterViewInit {
 
-  shelteredTable;
+  shelteredModel;
+  erro;
 
-  
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.shelteredTable.filter = filterValue.trim().toLowerCase();
+    this.shelteredModel.filter = filterValue.trim().toLowerCase();
   }
 
   constructor(
     private shelteredService: ShelteredService,
     private router: Router
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.getShelteredList();
@@ -51,13 +36,23 @@ export class DashboardComponent implements OnInit, AfterViewInit  {
     this.getShelteredList();
   }
 
-  goToNewShelteredAppointmentForm(){
+  goToNewShelteredAppointmentForm() {
     this.router.navigate(['/new-sheltered-appointment'])
   }
 
-  getShelteredList(){
-    this.shelteredService.getShelteredList().subscribe((res: any) => {
-      this.shelteredTable = res.data;
-    })    
+  /**
+   * Method to get a List of Sheltered Items
+   */
+  getShelteredList() {
+    this.shelteredService.getShelteredList().subscribe(
+      (res: any) => {
+        this.shelteredModel = res.data;
+        console.log('Dado sendo recebido: ', res.data);
+      },
+      (error: any) => {
+        this.erro = error;
+        console.log('Ocorreu o seguinte Erro: ', error);
+      }
+    );
   }
 }
