@@ -5,6 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
 import { ShelteredService } from 'src/app/Core/sheltered.service';
 import { ShelteredModel } from 'src/app/Models/shelteredModel';
+import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
 
 
 
@@ -18,6 +19,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   shelteredModel;
   erro;
 
+  formGroup: FormGroup;
+  
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.shelteredModel.filter = filterValue.trim().toLowerCase();
@@ -25,7 +29,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   constructor(
     private shelteredService: ShelteredService,
-    private router: Router
+    private router: Router,
+    private formBuilder: FormBuilder,
   ) { }
 
   ngOnInit(): void {

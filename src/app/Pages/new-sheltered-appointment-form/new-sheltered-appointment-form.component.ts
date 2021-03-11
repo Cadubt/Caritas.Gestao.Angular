@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ScheduleSheetService } from 'src/app/Core/schedule-sheet.service';
 
 
 @Component({
@@ -9,10 +10,11 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 })
 export class NewShelteredAppointmentFormComponent implements OnInit {
 
-shelteredAppointment: FormGroup;
+  shelteredAppointment: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
+    private scheduleSheetService: ScheduleSheetService
   ) { }
 
   ngOnInit(): void {
@@ -20,31 +22,28 @@ shelteredAppointment: FormGroup;
 
   }
 
-  createForm(){
+  createForm() {
     this.shelteredAppointment = this.formBuilder.group({
-      ShelteredName: [null],
-      ShelteredAge:[null],
-      ShelteredPhone: [null],
-      Id: [null],
-      ShelteredAddress: [null],
-      ShelteredAddressNumber: [null],
-      ShelteredAddressZipCode: [null],
-      ResponsibleName: [null],
-      KinshipId: [null],
-      ResponsiblePhone: [null],
-      ResponsibleAddress: [null],
-      ResponsibleAddressNumber: [null],
-      ResponsibleAddressZipCode: [null],
-      InterviewDate: [null],
-      ScheduleDate: [null],
-      Observation: [null],
-      ScheduleResponsible: [null],
-      CreatedAt: [null],
-      DeletedAt: [null],
-      })
+      shelteredName: [null],
+      shelteredAge: [null],
+      shelteredPhone: [null],
+      shelteredAddress: [null],
+      responsibleName: [null],
+      kinshipId: [null],
+      responsiblePhone: [null],
+      responsibleAddress: [null],
+      interviewDate: [null],
+      scheduleDate: [null],
+      observation: [null],
+      scheduleResponsible: [null],
+      createdAt: [null],
+      deletedAt: [null]
+    })
   }
 
-  onSubmit(){
-    console.log(this.shelteredAppointment)
+  onSubmit() {
+    const formData = this.shelteredAppointment.getRawValue();
+    console.log(formData)
+    this.scheduleSheetService.createSchadule(formData).subscribe(res => { });
   }
 }
