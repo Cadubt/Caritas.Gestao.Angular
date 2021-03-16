@@ -1,1 +1,28 @@
-<p>front-desk works!</p> 
+<div class="container">
+    <mat-card class="card" style="height: 100px;">
+        <mat-card-header>
+            <mat-card-title>Recepção</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="send">
+                <button class="sendButton" mat-raised-button color="primary" (click)="onNavigateTo('/record-visit')">
+                    <mat-icon _ngcontent-rex-c82="" role="img"
+                        class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">
+                        person_pin_circle</mat-icon>
+                    Agendar Visita
+                </button>
+                <button class="sendButton" mat-raised-button color="primary" (click)="onNavigateTo('/record-visit')">
+                    <mat-icon _ngcontent-rex-c82="" role="img"
+                        class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">apps</mat-icon>
+                    Agenda de Visitantes
+                </button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>Cadastrar Visitante</mat-card-title>
+            <mat-card-subtitle>Formulário de cadastro de Visitante</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</div>

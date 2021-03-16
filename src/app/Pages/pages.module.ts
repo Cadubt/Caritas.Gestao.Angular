@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginModule } from './login/login.module';
 import { DashboardModule } from './dashboard/dashboard.module';
@@ -15,6 +15,7 @@ import { FrontDeskComponent } from './front-desk/front-desk.component';
     DashboardModule,
     NewShelteredAppointmentFormModule,
   ],
-  exports:[LoginModule]
+  exports:[LoginModule],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class PagesModule { }
