@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-front-desk',
-  templateUrl: './front-desk.component.html',
-  styleUrls: ['./front-desk.component.scss']
+  selector: 'app-past-visit',
+  templateUrl: './past-visit.component.html',
+  styleUrls: ['./past-visit.component.scss']
 })
-export class FrontDeskComponent implements OnInit {
-  shelteredAppointment: FormGroup;
+export class PastVisitComponent implements OnInit {
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {

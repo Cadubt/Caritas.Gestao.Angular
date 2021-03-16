@@ -4,28 +4,31 @@ mat-form-field, mat-form-field-wrapper, mat-form-field-flex {
     border-radius: 2px;
     padding: 0.2rem;
     background-color: white;
-  }
+}
 
-  .container{
+.container {
     // grid-template-columns: 1fr minmax(920px, 4fr) 1fr;
     background-color: rgba(227, 227, 228, 0.911);
     max-height: fit-content;
-    width:80%;
-  }
+    width: 80%;
+}
 
 .card {
     max-height: fit-content;
-  }
-  
+}
 
+.sendButton {
+    margin-left: 5px;
+    margin-top: 5px;
+}
 
-  form{
+form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     max-height: fit-content;
     // grid-gap: 5px;
-  }
+}
 
 //   <<<<<< FORM >>>>>>
 
@@ -59,7 +62,7 @@ mat-form-field, mat-form-field-wrapper, mat-form-field-flex {
 }
 
 .shelteredAddressCEP {
-    grid-column:4/5;
+    grid-column: 4/5;
     grid-row: 3/4;
 }
 
@@ -88,7 +91,7 @@ mat-form-field, mat-form-field-wrapper, mat-form-field-flex {
 }
 
 .responsibleAddressCEP {
-    grid-column:4/5;
+    grid-column: 4/5;
     grid-row: 5/6;
 }
 
@@ -107,19 +110,15 @@ mat-form-field, mat-form-field-wrapper, mat-form-field-flex {
     grid-row: 6/7;
 }
 
-.send{
+.send {
     grid-column: 4/5;
     grid-row: 7/8;
     margin-left: auto;
     margin-right: 20px;
 }
 
-.sendButton{
-    margin-left: auto;
-}
-
 @media screen and (max-width: 1700px) {
-    .container{
-        width:90%;
-      }
-  }
+    .container {
+        width: 90%;
+    }
+}

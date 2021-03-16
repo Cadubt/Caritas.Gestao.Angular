@@ -5,11 +5,12 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { NewShelteredAppointmentFormModule} from './new-sheltered-appointment-form/new-sheltered-appointment-form.module';
 import { FrontDeskComponent } from './front-desk/front-desk.component';
 import { RecordVisitComponent } from './record-visit/record-visit.component';
+import { PastVisitComponent } from './past-visit/past-visit.component';
 
 
 
 @NgModule({
-  declarations: [FrontDeskComponent, RecordVisitComponent],
+  declarations: [FrontDeskComponent, RecordVisitComponent, PastVisitComponent],
   imports: [
     CommonModule,
     LoginModule,

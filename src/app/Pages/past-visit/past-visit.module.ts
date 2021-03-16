@@ -6,14 +6,13 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { FrontDeskComponent } from './front-desk.component';
+import { PastVisitComponent } from './past-visit.component';
 
 
 
 @NgModule({
-  declarations: [FrontDeskComponent],
+  declarations: [PastVisitComponent],
   imports: [
     CommonModule,
     MatFormFieldModule,
@@ -22,20 +21,7 @@ import { FrontDeskComponent } from './front-desk.component';
     MatButtonModule,
     MatDatepickerModule,
     MatCardModule,
-    MatInput,
-    FormsModule, 
-    ReactiveFormsModule
-  ],
-  exports: [
-    MatFormFieldModule,
-    MatInputModule,
-    MatNativeDateModule,
-    MatButtonModule,
-    MatDatepickerModule,
-    MatCardModule,
-    MatInput,
-    FormsModule, 
-    ReactiveFormsModule
+    MatInput
   ]
 })
-export class FrontDeskModule { }
+export class PastVisitModule { }

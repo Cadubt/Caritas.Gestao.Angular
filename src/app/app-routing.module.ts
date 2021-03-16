@@ -5,6 +5,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component'
 import { NewShelteredAppointmentFormComponent } from './pages/new-sheltered-appointment-form/new-sheltered-appointment-form.component';
 import { FrontDeskComponent } from './pages/front-desk/front-desk.component';
 import { RecordVisitComponent } from './pages/record-visit/record-visit.component';
+import { PastVisitComponent } from './pages/past-visit/past-visit.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,11 @@ const routes: Routes = [
   {
     path: 'record-visit',
     component: RecordVisitComponent ,
+  },
+
+  {
+    path: 'past-visit',
+    component: PastVisitComponent ,
   },
 
   
