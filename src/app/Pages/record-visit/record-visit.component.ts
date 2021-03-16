@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-front-desk',
-  templateUrl: './front-desk.component.html',
-  styleUrls: ['./front-desk.component.scss']
+  selector: 'app-record-visit',
+  templateUrl: './record-visit.component.html',
+  styleUrls: ['./record-visit.component.scss']
 })
-export class FrontDeskComponent implements OnInit {
+export class RecordVisitComponent implements OnInit {
 
   constructor(private router: Router) { }
 
