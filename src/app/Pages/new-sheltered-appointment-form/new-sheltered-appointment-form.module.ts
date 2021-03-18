@@ -10,6 +10,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [NewShelteredAppointmentFormComponent],
@@ -22,7 +23,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatInputModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatDatepickerModule 
+    MatDatepickerModule,
+    MatIconModule
   ]
 
 })

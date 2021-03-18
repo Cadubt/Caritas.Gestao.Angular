@@ -6,8 +6,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PastVisitComponent } from './past-visit.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -15,13 +17,15 @@ import { PastVisitComponent } from './past-visit.component';
   declarations: [PastVisitComponent],
   imports: [
     CommonModule,
+    MatCardModule,
+    FormsModule, 
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatCardModule,
-    MatInput
+    MatIconModule 
   ]
 })
 export class PastVisitModule { }

@@ -1,12 +1,27 @@
 <div class="container">
+
+  <mat-card class="card" style="height: 100px;">
+    <mat-card-header>
+      <mat-card-title>Acolhidos</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="send">
+        <button mat-raised-button color="primary" (click)="onNavigateTo('/new-sheltered')" class="sendButton">
+          <mat-icon _ngcontent-rex-c82="" role="img"
+                        class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">
+                        supervised_user_circle</mat-icon>
+                        &nbsp; Adicionar novo acolhido
+        </button>
+      </div>
+    </mat-card-content>
+
+
+
+  </mat-card>
+
   <div class="stick">
     <div class="title">
-      <h2 class="titleH2">Acolhidos</h2>
-    </div>
-    <div class="subtitle">
-      <h3>Lista de acolhidos</h3>
-      <button mat-raised-button (click)="goToNewShelteredAppointmentForm()" class="add_box">Adicionar novo acolhido
-      </button>
+      <h2 class="titleH2">Campo de Busca</h2>
     </div>
     <mat-form-field class="filterInput">
       <input matInput (keyup)="applyFilter($event)" placeholder="Buscar Acolhido" #input>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ScheduleSheetService } from 'src/app/Core/schedule-sheet.service';
 
 
@@ -14,12 +15,17 @@ export class NewShelteredAppointmentFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private scheduleSheetService: ScheduleSheetService
+    private scheduleSheetService: ScheduleSheetService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.createForm();
 
+  }
+
+  onNavigateTo(pageName){
+    this.router.navigate([`/${pageName}`]);
   }
 
   createForm() {

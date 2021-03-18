@@ -3,19 +3,25 @@ import { CommonModule } from '@angular/common';
 import { LoginModule } from './login/login.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { NewShelteredAppointmentFormModule} from './new-sheltered-appointment-form/new-sheltered-appointment-form.module';
-import { FrontDeskComponent } from './front-desk/front-desk.component';
-import { RecordVisitComponent } from './record-visit/record-visit.component';
-import { PastVisitComponent } from './past-visit/past-visit.component';
+import { FrontDeskModule } from './front-desk/front-desk.module';
+import { SocialServiceModule } from './social-service/social-service.module';
+import { RecordVisitModule } from './record-visit/record-visit.module';
+import { PastVisitModule } from './past-visit/past-visit.module';
 
 
 
 @NgModule({
-  declarations: [FrontDeskComponent, RecordVisitComponent, PastVisitComponent],
+  declarations: [],
   imports: [
     CommonModule,
     LoginModule,
     DashboardModule,
+    FrontDeskModule,
+    SocialServiceModule,    
     NewShelteredAppointmentFormModule,
+    PastVisitModule,
+    RecordVisitModule,
+    
   ],
   exports:[LoginModule],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

@@ -41,8 +41,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.getShelteredList();
   }
 
-  goToNewShelteredAppointmentForm() {
-    this.router.navigate(['/new-sheltered-appointment'])
+  onNavigateTo(pageName){
+    this.router.navigate([`/${pageName}`]);
   }
 
   /**

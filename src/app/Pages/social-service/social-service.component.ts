@@ -3,12 +3,12 @@ import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-front-desk',
-  templateUrl: './front-desk.component.html',
-  styleUrls: ['./front-desk.component.scss']
+  selector: 'app-social-service',
+  templateUrl: './social-service.component.html',
+  styleUrls: ['./social-service.component.scss']
 })
-export class FrontDeskComponent implements OnInit {
-  
+export class SocialServiceComponent implements OnInit {
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
