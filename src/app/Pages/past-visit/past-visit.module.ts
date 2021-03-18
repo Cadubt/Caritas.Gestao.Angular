@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NewShelteredAppointmentFormComponent } from './new-sheltered-appointment-form.component';
-
 import { MatCardModule } from '@angular/material/card';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { PastVisitComponent } from './past-visit.component';
 import { MatIconModule } from '@angular/material/icon';
 
+
+
 @NgModule({
-  declarations: [NewShelteredAppointmentFormComponent],
+  declarations: [PastVisitComponent],
   imports: [
     CommonModule,
     MatCardModule,
@@ -24,8 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatNativeDateModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatIconModule
+    MatIconModule 
   ]
-
 })
-export class NewShelteredAppointmentFormModule { }
+export class PastVisitModule { }

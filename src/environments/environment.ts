@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  BASE_URL_API: 'http://api-caritas.cadubt.com.br/swagger/index.html/',
+  BASE_URL_API: 'http://www.api-caritas.cadubt.com.br/api/'
+  // BASE_URL_API: 'http://localhost:63723/api/'
 };
 
 /*

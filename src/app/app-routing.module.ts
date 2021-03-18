@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
 import { NewShelteredAppointmentFormComponent } from './pages/new-sheltered-appointment-form/new-sheltered-appointment-form.component';
+import { FrontDeskComponent } from './pages/front-desk/front-desk.component';
+import { RecordVisitComponent } from './pages/record-visit/record-visit.component';
+import { PastVisitComponent } from './pages/past-visit/past-visit.component';
+import { SocialServiceComponent } from './pages/social-service/social-service.component';
 
 
 const routes: Routes = [
@@ -22,15 +26,33 @@ const routes: Routes = [
     component: NewShelteredAppointmentFormComponent ,
   },
 
+  {
+    path: 'front-desk',
+    component: FrontDeskComponent ,
+  },
+
+  {
+    path: 'record-visit',
+    component: RecordVisitComponent ,
+  },
+
+  {
+    path: 'past-visit',
+    component: PastVisitComponent ,
+  },
+
+  {
+    path: 'social-service',
+    component: SocialServiceComponent ,
+  },
+
   
 ];
 
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
-
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 
