@@ -7,6 +7,7 @@ import { FrontDeskComponent } from './pages/front-desk/front-desk.component';
 import { RecordVisitComponent } from './pages/record-visit/record-visit.component';
 import { PastVisitComponent } from './pages/past-visit/past-visit.component';
 import { SocialServiceComponent } from './pages/social-service/social-service.component';
+import { ShelteredAppointmentsComponent } from './pages/sheltered-appointments/sheltered-appointments.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,11 @@ const routes: Routes = [
   {
     path: 'social-service',
     component: SocialServiceComponent ,
+  },
+
+  {
+    path: 'sheltered-appointments',
+    component: ShelteredAppointmentsComponent ,
   },
 
   
