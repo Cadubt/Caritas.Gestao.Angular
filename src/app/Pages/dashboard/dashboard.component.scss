@@ -79,6 +79,14 @@
 .shelteredName {
   margin: 0;
   padding: 0;
+  text-overflow: ellipsis;overflow: hidden;max-width: auto;white-space: nowrap;
+}
+
+.shelteredResponsible{
+  margin: 0;
+  padding: 0;
+  max-width:130px;
+  text-overflow: ellipsis;overflow: hidden;max-width: auto;white-space: nowrap;
 }
 
 .shelteredAge {
