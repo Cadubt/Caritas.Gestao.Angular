@@ -55,7 +55,6 @@
 
 .cards {
   width: 100%;
-  display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-flow: wrap;
@@ -66,6 +65,7 @@
   min-width: 250px;
   height: 435px;
   margin: 0 1rem 2.5rem;
+  float: left;
 }
 
 .cardHeader{

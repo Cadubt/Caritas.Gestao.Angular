@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 import { ShelteredAppointmentsComponent } from './sheltered-appointments.component';
 
@@ -24,7 +25,8 @@ import { ShelteredAppointmentsComponent } from './sheltered-appointments.compone
     MatNativeDateModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
   ]
 })
 export class ShelteredAppointmentsModule { }

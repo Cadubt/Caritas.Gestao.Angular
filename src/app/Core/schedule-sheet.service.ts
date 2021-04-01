@@ -42,4 +42,9 @@ export class ScheduleSheetService {
   createSchadule(FormData: any): Observable<any> {
     return this.http.post(`${API_URL}ScheduleSheet/Create`, FormData);
   }
+
+  getScheduleList() {
+    var urlString = `${API_URL}ScheduleSheet/ListScheduleSheet`;
+    return this.http.get(urlString)
+  }
 }
