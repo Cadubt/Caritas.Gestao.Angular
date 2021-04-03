@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
@@ -28,6 +28,8 @@ import { NewShelteredComponent } from './new-sheltered.component';
     MatButtonModule,
     MatDatepickerModule,
     MatIconModule
-  ]
+  ],
+  exports:[],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class NewShelteredModule { }

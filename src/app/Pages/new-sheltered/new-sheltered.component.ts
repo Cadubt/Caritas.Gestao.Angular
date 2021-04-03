@@ -28,7 +28,19 @@ export class NewShelteredComponent implements OnInit {
 
   createForm() {
     this.shelteredForm = this.formBuilder.group({
-      
+      id: [null],
+      name: [null],
+      age: [null],
+      birthDate: [null],
+      phone: [null],
+      address: [null],
+      bloodTyping: [null],
+      entryDate: [null],
+      perfilImage: [null],
+      deceaseAt: [null],
+      statusId: [null],
+      createdAt: [null],
+      deletedAt: [null]
     })
   }
 
