@@ -55,7 +55,6 @@
 
 .cards {
   width: 100%;
-  display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-flow: wrap;
@@ -66,6 +65,7 @@
   min-width: 250px;
   height: 435px;
   margin: 0 1rem 2.5rem;
+  float: left;
 }
 
 .cardHeader{
@@ -79,6 +79,14 @@
 .shelteredName {
   margin: 0;
   padding: 0;
+  text-overflow: ellipsis;overflow: hidden;max-width: auto;white-space: nowrap;
+}
+
+.shelteredResponsible{
+  margin: 0;
+  padding: 0;
+  max-width:130px;
+  text-overflow: ellipsis;overflow: hidden;max-width: auto;white-space: nowrap;
 }
 
 .shelteredAge {

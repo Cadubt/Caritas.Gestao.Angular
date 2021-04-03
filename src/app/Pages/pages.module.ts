@@ -7,6 +7,8 @@ import { FrontDeskModule } from './front-desk/front-desk.module';
 import { SocialServiceModule } from './social-service/social-service.module';
 import { RecordVisitModule } from './record-visit/record-visit.module';
 import { PastVisitModule } from './past-visit/past-visit.module';
+import { ShelteredAppointmentsModule } from './sheltered-appointments/sheltered-appointments.module';
+import { NewShelteredModule } from './new-sheltered/new-sheltered.module';
 
 
 
@@ -21,7 +23,8 @@ import { PastVisitModule } from './past-visit/past-visit.module';
     NewShelteredAppointmentFormModule,
     PastVisitModule,
     RecordVisitModule,
-    
+    ShelteredAppointmentsModule,
+    NewShelteredModule
   ],
   exports:[LoginModule],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

@@ -7,16 +7,13 @@
     <mat-card-content>
       <div class="send">
         <button mat-raised-button color="primary" (click)="onNavigateTo('/new-sheltered')" class="sendButton">
-          <mat-icon _ngcontent-rex-c82="" role="img"
-                        class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">
-                        supervised_user_circle</mat-icon>
-                        &nbsp; Adicionar novo acolhido
+          <mat-icon _ngcontent-rex-c82="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color"
+            aria-hidden="true">
+            supervised_user_circle</mat-icon>
+          &nbsp; Adicionar novo acolhido
         </button>
       </div>
     </mat-card-content>
-
-
-
   </mat-card>
 
   <div class="stick">
@@ -26,11 +23,11 @@
     <mat-form-field class="filterInput">
       <input matInput (keyup)="applyFilter($event)" placeholder="Buscar Acolhido" #input>
     </mat-form-field>
-    <div class="cards">
+    <div class="cards" style="flex-flow: inherit; cursor: pointer;">
 
       <mat-card class="shelteredCard" *ngFor="let sheltered of shelteredModel">
 
-          <img mat-card-image class="photo" src={{sheltered.perfilImage}} alt="Photo of a Shiba Inu">
+        <img mat-card-image class="photo" src={{sheltered.perfilImage}} alt="Photo of a Shiba Inu">
 
 
         <mat-card-content>
@@ -38,19 +35,23 @@
           <h3 class="shelteredAge">{{sheltered.age}} Anos</h3>
           <div class="infoGrid">
             <div>
-              <p class="title">Setor</p><p>Norte</p>
+              <p class="title">Setor</p>
+              <p>Norte</p>
             </div>
             <div>
-              <p class="title">Quarto</p><p>508</p>
+              <p class="title">Quarto</p>
+              <p>508</p>
             </div>
 
             <div>
-              <p class="title">Responsável</p><p>Fulano da Silva Sauro</p>
+              <p class="title">Responsável</p>
+              <p class="shelteredResponsible">Fulano da Silva Sauro</p>
             </div>
             <div>
-              <p class="title">Telefone</p><p>{{sheltered.phone}}</p>
+              <p class="title">Telefone</p>
+              <p>{{sheltered.phone}}</p>
             </div>
-            
+
           </div>
           <mat-card-actions>
             <button mat-button>Ver mais</button>
