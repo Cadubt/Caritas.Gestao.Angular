@@ -9,11 +9,12 @@ import { RecordVisitModule } from './record-visit/record-visit.module';
 import { PastVisitModule } from './past-visit/past-visit.module';
 import { ShelteredAppointmentsComponent } from './sheltered-appointments/sheltered-appointments.component';
 import { ShelteredAppointmentsModule } from './sheltered-appointments/sheltered-appointments.module';
+import { NewShelteredComponent } from './new-sheltered/new-sheltered.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [NewShelteredComponent],
   imports: [
     CommonModule,
     LoginModule,
