@@ -7,14 +7,13 @@ import { FrontDeskModule } from './front-desk/front-desk.module';
 import { SocialServiceModule } from './social-service/social-service.module';
 import { RecordVisitModule } from './record-visit/record-visit.module';
 import { PastVisitModule } from './past-visit/past-visit.module';
-import { ShelteredAppointmentsComponent } from './sheltered-appointments/sheltered-appointments.component';
 import { ShelteredAppointmentsModule } from './sheltered-appointments/sheltered-appointments.module';
-import { NewShelteredComponent } from './new-sheltered/new-sheltered.component';
+import { NewShelteredModule } from './new-sheltered/new-sheltered.module';
 
 
 
 @NgModule({
-  declarations: [NewShelteredComponent],
+  declarations: [],
   imports: [
     CommonModule,
     LoginModule,
@@ -25,7 +24,7 @@ import { NewShelteredComponent } from './new-sheltered/new-sheltered.component';
     PastVisitModule,
     RecordVisitModule,
     ShelteredAppointmentsModule,
-    
+    NewShelteredModule
   ],
   exports:[LoginModule],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
