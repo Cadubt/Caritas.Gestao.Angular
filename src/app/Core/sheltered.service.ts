@@ -22,5 +22,8 @@ export class ShelteredService {
     return this.http.get(urlString)
   }
 
+  createSheltered(FormData: any): Observable<any> {
+    return this.http.post(`${API_URL}Sheltered/Create`, FormData);
+  }
   
 }

@@ -26,51 +26,41 @@
         <mat-card-header>
             <form [formGroup]="shelteredForm">
                 <mat-form-field class='shelteredName'>
-                    <input matInput placeholder="Nome do acolhido" formControlName="name">
+                    <input matInput placeholder="Nome do acolhido" formControlName="name"/>
                 </mat-form-field>
 
                 <mat-form-field class='shelteredAge'>
-                    <input matInput placeholder="Idade" formControlName="age" type="number">
+                    <input matInput placeholder="Idade" formControlName="age" type="number"/>
                 </mat-form-field>
 
                 <mat-form-field class='registrationBirthDate'>
                     <mat-label>Data de Nascimento</mat-label>
-                    <input formControlName="birthDate" matInput [matDatepicker]="date">
+                    <input formControlName="birthDate" matInput [matDatepicker]="date"/>
                     <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
                     <mat-datepicker #date></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field class='shelteredBloodTyping'>
-                    <input matInput placeholder="Tipo Sanguíneo" formControlName="bloodTyping">
+                    <input matInput placeholder="Tipo Sanguíneo" formControlName="bloodTyping"/>
                 </mat-form-field>
 
-                <mat-form-field class='shelteredImage'>
+                <!-- <mat-form-field class='shelteredImage'>
                     <input type="file" #fileInput id="uploadFile" name="uploadFile" accept="image/*" />
-                </mat-form-field>
+                </mat-form-field> -->
 
                 <mat-form-field class='shelteredAddress'>
-                    <input matInput placeholder="Endereço" formControlName="address" type="text">
+                    <input matInput placeholder="Endereço" formControlName="address" type="text"/>
                 </mat-form-field>
 
                 <mat-form-field class='shelteredPhone'>
-                    <input matInput placeholder="Telefone" formControlName="phone">
+                    <input matInput placeholder="Telefone" formControlName="phone"/>
                 </mat-form-field>
-
-
-                <!-- <div class="backButton" style="float: right;">
-                    <button mat-raised-button color="primary">
-                        <mat-icon _ngcontent-rex-c82="" role="img"
-                            class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">elderly
-                        </mat-icon>
-                        Cadastrar Acolhido
-                    </button>
-                </div> -->
 
             </form>
         </mat-card-header>
         <mat-card-content>
             <div class="backButton">
-                <button mat-raised-button color="primary">
+                <button mat-raised-button color="primary" (click)="onSubmit()">
                     <mat-icon _ngcontent-rex-c82="" role="img"
                         class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">elderly
                     </mat-icon>
@@ -79,5 +69,4 @@
             </div>
         </mat-card-content>
     </mat-card>
-
 </div>
