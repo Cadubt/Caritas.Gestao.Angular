@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ShelteredService } from 'src/app/Core/sheltered.service';
+import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
 
 @Component({
   selector: 'app-new-sheltered',
@@ -15,20 +16,20 @@ export class NewShelteredComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private shelteredService: ShelteredService,
-    private router: Router) { }
-    
+    private router: Router) {
+  }
+
   ngOnInit(): void {
     this.createForm();
 
   }
 
-  onNavigateTo(pageName){
+  onNavigateTo(pageName) {
     this.router.navigate([`/${pageName}`]);
   }
 
   createForm() {
     this.shelteredForm = this.formBuilder.group({
-      id: [null],
       name: [null],
       age: [null],
       birthDate: [null],
@@ -36,18 +37,20 @@ export class NewShelteredComponent implements OnInit {
       address: [null],
       bloodTyping: [null],
       entryDate: [null],
-      perfilImage: [null],
+      perfilImage: 'https://rochaemouta.com.br/wp-content/uploads/2017/05/carencia.jpg',
       deceaseAt: [null],
-      statusId: [null],
+      statusId: 1,
       createdAt: [null],
       deletedAt: [null]
     })
   }
 
   onSubmit() {
-    // const formData = this.shelteredAppointment.getRawValue();
-    // console.log(formData)
-    // this.scheduleSheetService.createSchadule(formData).subscribe(res => { });
+    
+    const formData = this.shelteredForm.getRawValue();
+    formData.entryDate = formData.birthDate;
+    console.log(formData)
+    this.shelteredService.createSheltered(formData).subscribe(res => { });
   }
 
 }
