@@ -23,37 +23,62 @@
             <mat-card-title>Ficha de cadastramento de possível acolhido</mat-card-title>
             <mat-card-subtitle>Formulário de cadastro</mat-card-subtitle>
         </mat-card-header>
-        <mat-card-header>
+        <mat-card-header style="padding-bottom: 30px; display: grid; padding-left: 42px;">
             <form [formGroup]="shelteredForm">
+
+                <mat-form-field class='shelteredImage'>
+                    <input hidden #fileInput  type="file"/>
+                    <button type="button" mat-raised-button (click)="fileInput.click()" style="height:35px;width:230px;background-color: rgb(107, 127, 223);color:white;">Imagem do acolhido</button>
+                    <mat-form-field style="width:100%;height:30px;margin: 0;">                        
+                        <input matInput formControlName="perfilImage">
+                    </mat-form-field>
+                </mat-form-field>
+
                 <mat-form-field class='shelteredName'>
-                    <input matInput placeholder="Nome do acolhido" formControlName="name"/>
+                    <input matInput placeholder="Nome do acolhido" formControlName="name" required />
                 </mat-form-field>
 
                 <mat-form-field class='shelteredAge'>
-                    <input matInput placeholder="Idade" formControlName="age" type="number"/>
+                    <input matInput placeholder="Idade" formControlName="age" type="number" />
                 </mat-form-field>
 
                 <mat-form-field class='registrationBirthDate'>
                     <mat-label>Data de Nascimento</mat-label>
-                    <input formControlName="birthDate" matInput [matDatepicker]="date"/>
+                    <input formControlName="birthDate" matInput [matDatepicker]="date" />
                     <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
                     <mat-datepicker #date></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field class='shelteredBloodTyping'>
-                    <input matInput placeholder="Tipo Sanguíneo" formControlName="bloodTyping"/>
+                    <mat-label>Tipo Sanguíneo</mat-label>
+                    <mat-select formControlName="bloodTyping">
+                        <mat-option></mat-option>
+                        <mat-option value="O-">O-</mat-option>
+                        <mat-option value="O+">O+</mat-option>
+                        <mat-option value="A+">A+</mat-option>
+                        <mat-option value="A-">A-</mat-option>
+                        <mat-option value="B+">B+</mat-option>
+                        <mat-option value="B-">B-</mat-option>
+                        <mat-option value="AB+">AB+</mat-option>
+                        <mat-option value="AB-">AB-</mat-option>
+                    </mat-select>
                 </mat-form-field>
 
-                <!-- <mat-form-field class='shelteredImage'>
-                    <input type="file" #fileInput id="uploadFile" name="uploadFile" accept="image/*" />
-                </mat-form-field> -->
+                <mat-form-field class='shelteredGender'>
+                    <mat-label>Sexo</mat-label>
+                    <mat-select formControlName="gender">
+                        <mat-option></mat-option>
+                        <mat-option value="M">Masculino</mat-option>
+                        <mat-option value="F">Faminino</mat-option>
+                    </mat-select>
+                </mat-form-field>
 
                 <mat-form-field class='shelteredAddress'>
-                    <input matInput placeholder="Endereço" formControlName="address" type="text"/>
+                    <input matInput placeholder="Endereço" formControlName="address" type="text" />
                 </mat-form-field>
 
                 <mat-form-field class='shelteredPhone'>
-                    <input matInput placeholder="Telefone" formControlName="phone"/>
+                    <input matInput placeholder="Telefone" formControlName="phone" />
                 </mat-form-field>
 
             </form>

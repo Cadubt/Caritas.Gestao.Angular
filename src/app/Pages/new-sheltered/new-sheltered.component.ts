@@ -32,6 +32,7 @@ export class NewShelteredComponent implements OnInit {
     this.shelteredForm = this.formBuilder.group({
       name: [null],
       age: [null],
+      gender: [null],
       birthDate: [null],
       phone: [null],
       address: [null],
@@ -49,8 +50,9 @@ export class NewShelteredComponent implements OnInit {
     
     const formData = this.shelteredForm.getRawValue();
     formData.entryDate = formData.birthDate;
-    console.log(formData)
+    // console.log(formData)
     this.shelteredService.createSheltered(formData).subscribe(res => { });
+    window.location.href = "dashboard";
   }
 
 }

@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [NewShelteredAppointmentFormComponent],
@@ -24,7 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatNativeDateModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule,
   ]
 
 })
