@@ -49,7 +49,11 @@ export class NewShelteredAppointmentFormComponent implements OnInit {
 
   onSubmit() {
     const formData = this.shelteredAppointment.getRawValue();
-    console.log(formData)
+    formData.kinshipId = parseInt(formData.kinshipId);
+    formData.shelteredAge = parseInt(formData.shelteredAge);
+    formData.createdAt = formData.interviewDate;
+    // console.log(formData)
     this.scheduleSheetService.createSchadule(formData).subscribe(res => { });
+    window.location.href = "sheltered-appointments";
   }
 }

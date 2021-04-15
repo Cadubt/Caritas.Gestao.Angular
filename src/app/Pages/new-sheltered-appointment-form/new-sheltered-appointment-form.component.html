@@ -64,8 +64,23 @@
         </mat-form-field>
 
         <mat-form-field class='relativeness'>
-          <input matInput placeholder="grau de parentesco" formControlName="kinshipId">
-        </mat-form-field>
+          <mat-label>grau de parentesco</mat-label>
+          <mat-select formControlName="kinshipId">
+              <mat-option></mat-option>
+              <mat-option value="1">Pai/Mãe</mat-option>
+              <mat-option value="3">Filho(a)</mat-option>
+              <mat-option value="25">Neto(a)</mat-option>
+              <mat-option value="22">Bisneto(a)</mat-option>
+              <mat-option value="5">Cônjuje</mat-option>
+              <mat-option value="6">Nora</mat-option>
+              <mat-option value="7">Genro</mat-option>
+              <mat-option value="10">Cunhado(a)</mat-option>
+              <mat-option value="12">Primo(a)</mat-option>
+              <mat-option value="16">Sobrinho(a)</mat-option>
+              <mat-option value="20">Amigo(a)</mat-option>
+          </mat-select>
+      </mat-form-field>
+
 
         <mat-form-field class='responsiblePhone'>
           <input matInput placeholder="Telefone do responsável" formControlName="responsiblePhone">
