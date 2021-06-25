@@ -14,6 +14,9 @@ import { SidenavModule } from '../app/Shared/sidenav/sidenav.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ShelteredService } from './Core/sheltered.service';
 import { SidenavMenuService  } from './Shared/sidenav/sidenav-menu.service'
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,15 @@ import { SidenavMenuService  } from './Shared/sidenav/sidenav-menu.service'
     FooterModule,
     MatSidenavModule,
     SidenavModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatSelectModule,
   ],
   exports: [
     MatSidenavModule,
     SidenavModule
   ],
-  providers: [AuthService, HttpClientModule, ShelteredService, SidenavMenuService ],
-  bootstrap: [AppComponent]
+  providers: [{provide: MAT_DATE_LOCALE, useValue: 'en-GB'}, AuthService, HttpClientModule, ShelteredService, SidenavMenuService ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
