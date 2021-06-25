@@ -25,9 +25,12 @@
             <mat-card-subtitle>Lista de Visitantes cadastrados:</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-
-            
-    
+            <mat-list>
+                <h3 mat-subheader>Entrevistas Registradas:</h3>
+                <mat-list-item *ngFor="let visitor of visitorModel">
+                    <p mat-line class="demo-2">Nome do Cabra: <b>{{visitor.name}}</b></p>
+                </mat-list-item>
+            </mat-list>
         </mat-card-content>
     </mat-card>
 </div>
