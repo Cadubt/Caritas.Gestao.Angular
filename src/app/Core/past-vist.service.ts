@@ -14,7 +14,7 @@ export class PastVistService {
   ) { }
 
   getVistorList() {
-    var urlString = `${API_URL}Visitor/ListVisitors?visitDate=2021-02-28`;
+    var urlString = `${API_URL}Visitor/ListVisitors`;
     return this.http.get(urlString)
   }
 }
