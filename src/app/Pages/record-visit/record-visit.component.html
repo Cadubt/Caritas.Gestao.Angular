@@ -26,68 +26,64 @@
             <mat-card-title>Cadastrar Visitante</mat-card-title>
             <mat-card-subtitle>Formulário de cadastro de Visitante</mat-card-subtitle>
         </mat-card-header>
-        <!-- <mat-card-content>
-            <form [formGroup]="shelteredAppointment">
 
-                <mat-form-field class='registrationDate'>
-                    <mat-label>Data de cadastro</mat-label>
-                    <input formControlName="scheduleDate" matInput [matDatepicker]="date">
-                    <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
-                    <mat-datepicker #date></mat-datepicker>
+
+        <mat-card-content style='padding-left: 20px;'>
+            <form [formGroup]="recordVisitForm">
+
+                <mat-form-field class='visitName'>
+                    <input matInput placeholder="Nome do visitante" formControlName="name">
                 </mat-form-field>
 
-                <mat-form-field class='shelteredName'>
-                    <input matInput placeholder="Nome do acolhido" formControlName="shelteredName">
-                </mat-form-field>
-
-                <mat-form-field class='shelteredAge'>
-                    <input matInput placeholder="Idade do acolhido" formControlName="shelteredAge">
-                </mat-form-field>
-
-                <mat-form-field class='shelteredPhone'>
-                    <input matInput placeholder="Telefone do acolhido" formControlName="shelteredPhone">
-                </mat-form-field>
-
-                <mat-form-field class='shelteredAddress'>
-                    <input matInput placeholder="Logradouro" formControlName="shelteredAddress">
-                </mat-form-field>
-
-                <mat-form-field class='responsibleName'>
-                    <input matInput placeholder="Nome do responsável" formControlName="responsibleName">
+                <mat-form-field class='visitPhone'>
+                    <input matInput placeholder="Numero de Telefone" formControlName="phone">
                 </mat-form-field>
 
                 <mat-form-field class='relativeness'>
-                    <input matInput placeholder="grau de parentesco" formControlName="kinshipId">
+                    <mat-label>grau de parentesco</mat-label>
+                    <mat-select formControlName="kinshipId">
+                        <mat-option></mat-option>
+                        <mat-option value="1">Pai/Mãe</mat-option>
+                        <mat-option value="3">Filho(a)</mat-option>
+                        <mat-option value="25">Neto(a)</mat-option>
+                        <mat-option value="22">Bisneto(a)</mat-option>
+                        <mat-option value="5">Cônjuje</mat-option>
+                        <mat-option value="6">Nora</mat-option>
+                        <mat-option value="7">Genro</mat-option>
+                        <mat-option value="10">Cunhado(a)</mat-option>
+                        <mat-option value="12">Primo(a)</mat-option>
+                        <mat-option value="16">Sobrinho(a)</mat-option>
+                        <mat-option value="20">Amigo(a)</mat-option>
+                    </mat-select>
                 </mat-form-field>
 
-                <mat-form-field class='responsiblePhone'>
-                    <input matInput placeholder="Telefone do responsável" formControlName="responsiblePhone">
+                <mat-form-field class='visitAddress'>
+                    <input matInput placeholder="Endereço" formControlName="visitAddress">
                 </mat-form-field>
 
-                <mat-form-field class='responsibleAddress'>
-                    <input matInput placeholder="Endereço do Responsável" formControlName="responsibleAddress">
+                <mat-form-field class='visitRg'>
+                    <input matInput placeholder="Rg do visitante" formControlName="visitRg">
                 </mat-form-field>
 
-                <mat-form-field class='interviewDate'>
-                    <mat-label>Data da entrevista</mat-label>
-                    <input matInput [matDatepicker]="interviewDate" formControlName="interviewDate">
-                    <mat-datepicker-toggle matSuffix [for]="interviewDate"></mat-datepicker-toggle>
-                    <mat-datepicker #interviewDate></mat-datepicker>
+                <mat-form-field class='shelteredId'>
+                    <input matInput placeholder="Nome do acolhido" formControlName="shelteredId">
                 </mat-form-field>
 
-                <mat-form-field class='obs'>
-                    <textarea matInput placeholder="Observações" formControlName="observation"></textarea>
+                <!-- calendario -->
+                <mat-form-field class='visitDate'>
+                    <mat-label>Data da visitante</mat-label>
+                    <input matInput [matDatepicker]="visitDate" formControlName="visitDate">
+                    <mat-datepicker-toggle matSuffix [for]="visitDate"></mat-datepicker-toggle>
+                    <mat-datepicker #visitDate></mat-datepicker>
                 </mat-form-field>
-
-                <mat-form-field class='AppointmentResponsible'>
-                    <input matInput placeholder="Responsável pelo Agendamento" formControlName="scheduleResponsible">
-                </mat-form-field>
-
+                <!--Botão para enviar formulario-->
                 <div class="send">
-                    <button class="sendButton" mat-raised-button color="primary" (click)="onSubmit()">Enviar</button>
+                    <button class="sendButton" mat-raised-button color="primary" (click)="onSubmit()">Cadastrar</button>
                 </div>
 
             </form>
-        </mat-card-content> -->
+        </mat-card-content>
+
+
     </mat-card>
 </div>
