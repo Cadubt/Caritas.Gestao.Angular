@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PastVisitComponent } from './past-visit.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -25,7 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatNativeDateModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatIconModule 
+    MatIconModule,
+    MatListModule
   ]
 })
 export class PastVisitModule { }
