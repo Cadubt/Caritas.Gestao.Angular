@@ -42,9 +42,8 @@ export class RecordVisitComponent implements OnInit {
     
   }
   onSubmit() {
-    
     const formData = this.recordVisitForm.getRawValue();
-    formData.entryDate = formData.birthDate;
+    console.log(this.recordVisitForm);
     // console.log(formData)
     this.recordVisitService.createVisit(formData).subscribe(res => { });
     window.alert("Salvo com Sucesso")
@@ -52,6 +51,3 @@ export class RecordVisitComponent implements OnInit {
   }
 
 }
-
-
-

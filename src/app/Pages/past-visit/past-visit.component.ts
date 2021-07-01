@@ -4,17 +4,13 @@ import { Router } from '@angular/router';
 import { PastVistService } from 'src/app/Core/past-vist.service';
 import { visitorModel } from 'src/app/Models/visitorModel';
 
+
 @Component({
   selector: 'app-past-visit',
   templateUrl: './past-visit.component.html',
   styleUrls: ['./past-visit.component.scss']
 })
 export class PastVisitComponent implements OnInit {
-
-  constructor(
-    private router: Router,
-    private pastVisitService: PastVistService
-  ) { }
 
   kinshipList: string[] = [
     '.',
@@ -44,45 +40,58 @@ export class PastVisitComponent implements OnInit {
     'Nenhum',
     'Neto',
     'Neta'];
-    
-  for(let visitor of visitorModel) {
-    console.log(kinship)
+
+  constructor(
+    private router: Router,
+    private pastVisitService: PastVistService
+  ) {}
+
+  visitorModel;
+  Error;
+
+  ngOnInit(): void {
+    this.getVistorList();
   }
-  for(let i = 0; i<value.length; i++) {
+
+  onNavigateTo(pageName) {
+    this.router.navigate([`/${pageName}`]);
+  }
+
+  getVistorList() {
+    this.pastVisitService.getVistorList().subscribe(
+      (res: any) => {
+        this.visitorModel = res.data;
+
+        //Varedura na lista de visitantes
+        for (let v = 0; v < this.visitorModel.length; v++) { //CADU e um por um em diante
+          //varredura na lista de parentesco (array)
+          for (let i = 0; i < this.kinshipList.length; i++) {
+            //O Id parentesco do visitante é igual a posição do array que estou vendo agora?
+            if (this.visitorModel[v].kinshipId == this.kinshipList.indexOf(this.kinshipList[i], i)) {
+              //Se sim, substitua o numero kinship pelo texto kinship
+              this.visitorModel[v].kinshipId = this.kinshipList[i];
+            }
+          }
+        }
+
+
+
+        /*foreacth visitor dentro do visitorModel
+        for kinship
+        {
+          kinship[i] == visitor.Kinship
+           visitorModelTreated.kinshipId = kinship
+        }*/
+        console.log('Restorno do Endpoint: ', res.data);
+      },
+      (error: any) => {
+        this.Error = error;
+        console.log('Restorno do Endpoint: ', error);
+      }
+    )
+  }
 
 }
 
-visitorModel;
-visitorModelNotDeclared;
-erro;
 
-ngOnInit(): void {
-  this.getVistorList();
-}
-
-onNavigateTo(pageName) {
-  this.router.navigate([`/${pageName}`]);
-}
-
-getVistorList() {
-  this.pastVisitService.getVistorList().subscribe(
-    (res: any) => {
-      this.visitorModel = res.data;
-      /*foreacth visitor dentro do visitorModel
-      for kinship
-      {
-        kinship[i] == visitor.Kinship
-        visitorModelTreated.kinshipId = kinship
-      }*/
-      console.log('Restorno do Endpoint: ', res.data);
-    },
-    (error: any) => {
-      this.erro = error;
-      console.log('Restorno do Endpoint: ', error);
-    }
-  )
-}
-
-
-}
 
