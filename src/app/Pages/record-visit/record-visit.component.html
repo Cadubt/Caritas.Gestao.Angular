@@ -43,8 +43,10 @@
                     <mat-label>grau de parentesco</mat-label>
                     <mat-select formControlName="kinshipId">
                         <mat-option></mat-option>
-                        <mat-option value="1">Pai/Mãe</mat-option>
-                        <mat-option value="3">Filho(a)</mat-option>
+                        <mat-option value="1">Pai</mat-option>
+                        <mat-option value="2">Mãe</mat-option>
+                        <mat-option value="3">Filho</mat-option>
+                        <mat-option value="4">Filha</mat-option>
                         <mat-option value="25">Neto(a)</mat-option>
                         <mat-option value="22">Bisneto(a)</mat-option>
                         <mat-option value="5">Cônjuje</mat-option>
@@ -58,11 +60,11 @@
                 </mat-form-field>
 
                 <mat-form-field class='visitAddress'>
-                    <input matInput placeholder="Endereço" formControlName="visitAddress">
+                    <input matInput placeholder="Endereço" formControlName="adress">
                 </mat-form-field>
 
                 <mat-form-field class='visitRg'>
-                    <input matInput placeholder="Rg do visitante" formControlName="visitRg">
+                    <input matInput placeholder="Rg do(a) Cabra" formControlName="rg">
                 </mat-form-field>
 
                 <mat-form-field class='shelteredId'>
@@ -78,7 +80,8 @@
                 </mat-form-field>
                 <!--Botão para enviar formulario-->
                 <div class="send">
-                    <button class="sendButton" mat-raised-button color="primary" (click)="onSubmit()">Cadastrar</button>
+                    <button class="sendButton" mat-raised-button color="primary" 
+                    (click)="onSubmit()">Cadastrar</button>
                 </div>
 
             </form>

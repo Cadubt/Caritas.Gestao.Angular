@@ -20,24 +20,25 @@
             </div>
         </mat-card-content>
     </mat-card>
-    <mat-card class="card" style="min-height: 800px;">
+    <mat-card class="card" style="min-height: 800px;cursor:pointer;">
+
         <mat-card-header>
             <mat-card-title>Visitante Cadastrados</mat-card-title>
             <mat-card-subtitle>Lista de Visitantes cadastrados:</mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content>
-
-            <mat-list>
-                <h3 mat-subheader>Entrevistas Registradas:</h3>
-                <mat-list-item *ngFor="let visitor of visitorModel">
-                    <p mat-line class="demo-2">Nome do Visitante: <b>{{visitor.name}}</b></p>
-                </mat-list-item>
-            </mat-list>
-
-
-        </mat-card-content>
-
-        
+        <mat-list>
+            <h3 mat-subheader>Registro de Visitas</h3>
+            <mat-list-item *ngFor="let visitor of visitorModel">
+                <mat-icon mat-list-icon>calendar_today</mat-icon>
+                <h4 mat-line> Visita para o(a) : <b>{{ visitor.shelteredId }}</b>, no dia: <b>{{ visitor.visitDate |
+                        date:'dd/MM/yyyy'}} ás {{visitor.visitDate | date:'hh:mm'}}hrs</b> </h4>
+                <p mat-line class="demo-1">Nome do Visitante: <b>{{visitor.name}}</b></p>
+                <p mat-line class="demo-2">Telefone: <b>{{visitor.phone}}</b></p>
+                <p mat-line class="demo-2">rg: <b>{{visitor.rg}}</b></p>
+                <p mat-line class="demo-2">Endereço: <b>{{visitor.adress}}</b></p>
+                <p mat-line class="demo-2">Grau de Parentesco: <b>{{visitor.kinshipId}}</b></p>
+            </mat-list-item>
+        </mat-list>
 
     </mat-card>
 </div>

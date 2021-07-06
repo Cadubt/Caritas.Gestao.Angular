@@ -15,6 +15,10 @@ export class RecordVisitService {
     private http: HttpClient
   ) { }
 
+  /**
+   * Cria um visitante com base no que foi preenchido no formulario   * @param FormData 
+   * @returns 
+   */
     createVisit(FormData: any): Observable<any> {
       return this.http.post(`${API_URL}Visitor/CreateVisitors`, FormData);
     }
