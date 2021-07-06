@@ -12,6 +12,7 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -29,8 +30,11 @@ import { MatSelectModule } from '@angular/material/select';
     MatDatepickerModule,
     MatIconModule,
     MatSelectModule,
+    MatListModule,
+    MatInput,
+    
   ],
   exports:[],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class ConfigurationModule { }
+export class UserConfigurationModule { }
