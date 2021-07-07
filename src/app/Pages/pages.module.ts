@@ -5,10 +5,12 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { NewShelteredAppointmentFormModule} from './new-sheltered-appointment-form/new-sheltered-appointment-form.module';
 import { FrontDeskModule } from './front-desk/front-desk.module';
 import { SocialServiceModule } from './social-service/social-service.module';
+import { UserConfigurationModule } from './user-configuration/user-configuration.module';
 import { RecordVisitModule } from './record-visit/record-visit.module';
 import { PastVisitModule } from './past-visit/past-visit.module';
 import { ShelteredAppointmentsModule } from './sheltered-appointments/sheltered-appointments.module';
 import { NewShelteredModule } from './new-sheltered/new-sheltered.module';
+
 
 
 
@@ -19,12 +21,12 @@ import { NewShelteredModule } from './new-sheltered/new-sheltered.module';
     LoginModule,
     DashboardModule,
     FrontDeskModule,
-    SocialServiceModule,    
+    SocialServiceModule,
     NewShelteredAppointmentFormModule,
     PastVisitModule,
     RecordVisitModule,
     ShelteredAppointmentsModule,
-    NewShelteredModule
+    NewShelteredModule,
   ],
   exports:[LoginModule],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
