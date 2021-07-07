@@ -13,7 +13,7 @@ export class UserConfigurationService {
   ) { }
 
   getUserById(){
-    var urlString=`${API_URL}User/GetUserById`;
+    var urlString=`${API_URL}User/GetUserById?UserId=6`;
     return this.http.get(urlString)
   }
 
