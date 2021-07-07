@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserConfigurationService } from 'src/app/Core/user-Configuration.Service';
 
 @Component({
   selector: 'app-user-configuration',
@@ -9,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class UserConfigurationComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private userConfigurationService: UserConfigurationService
+  ) { }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,4 @@
-export class configurationModel{
+export class userConfigurationModel{
     public id: number;
     public name: string;
     public password: string;
