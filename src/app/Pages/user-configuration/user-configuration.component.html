@@ -21,32 +21,32 @@
         </mat-card-header>
         
         <mat-card-content style='padding-left: 20px;'>
-            <form>
+            <form [formGroup]="userConfigurationForm">
 
                 <mat-form-field class='name'>
                     <input matInput placeholder={{usuario.name}} formControlName="name">
                 </mat-form-field>
 
                 <mat-form-field class='currentPassword'>
-                    <input type="password" matInput placeholder="Senha Atual" formControlName="passaword">
+                    <input type="password" matInput placeholder="Senha Atual" formControlName="password">
                 </mat-form-field>
 
                 <mat-form-field class='newPassword'>
-                    <input type="password" matInput placeholder="Nova Senha" formControlName="passaword">
+                    <input type="password" matInput placeholder="Nova Senha" formControlName="newPassword">
                 </mat-form-field>
 
                 <mat-form-field class='repeatNewPassword'>
-                    <input type="password" matInput placeholder="Repita a Senha" formControlName="passaword">
+                    <input type="password" matInput placeholder="Repita a Senha" formControlName="repeatPassword" required>
                 </mat-form-field>
 
 
                 <mat-form-field class='newEmail'>
-                    <input matInput placeholder={{usuario.email}} formControlName="Email">
+                    <input matInput placeholder={{usuario.email}} formControlName="email">
                 </mat-form-field>
 
                 
                 <div class="send">
-                    <button class="sendButton" mat-raised-button color="primary"> Atualizar </button>
+                    <button class="sendButton" mat-raised-button color="primary" (click)="onSubmit()"> Atualizar </button>
                 </div>
 
             </form>

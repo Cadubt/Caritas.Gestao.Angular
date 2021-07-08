@@ -73,20 +73,15 @@ export class PastVisitComponent implements OnInit {
             }
           }
         }
-
-
-
         /*foreacth visitor dentro do visitorModel
         for kinship
         {
           kinship[i] == visitor.Kinship
            visitorModelTreated.kinshipId = kinship
         }*/
-        console.log('Restorno do Endpoint: ', res.data);
       },
       (error: any) => {
         this.Error = error;
-        console.log('Restorno do Endpoint: ', error);
       }
     )
   }
