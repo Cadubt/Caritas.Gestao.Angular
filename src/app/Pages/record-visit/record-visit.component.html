@@ -32,7 +32,7 @@
             <form [formGroup]="recordVisitForm">
 
                 <mat-form-field class='visitName'>
-                    <input matInput placeholder="Nome do visitante" formControlName="name">
+                    <input matInput placeholder="Nome do visitante" formControlName="name" required>
                 </mat-form-field>
 
                 <mat-form-field class='visitPhone'>
@@ -41,7 +41,7 @@
 
                 <mat-form-field class='relativeness'>
                     <mat-label>grau de parentesco</mat-label>
-                    <mat-select formControlName="kinshipId">
+                    <mat-select formControlName="kinshipId" required>
                         <mat-option></mat-option>
                         <mat-option value="1">Pai</mat-option>
                         <mat-option value="2">Mãe</mat-option>
@@ -64,11 +64,11 @@
                 </mat-form-field>
 
                 <mat-form-field class='visitRg'>
-                    <input matInput placeholder="Rg do(a) Cabra" formControlName="rg">
+                    <input matInput placeholder="Rg" formControlName="rg" required>
                 </mat-form-field>
 
                 <mat-form-field class='shelteredId'>
-                    <input matInput placeholder="Nome do acolhido" formControlName="shelteredId">
+                    <input matInput placeholder="Nome do acolhido" formControlName="shelteredId" required>
                 </mat-form-field>
 
                 <!-- calendario -->

@@ -26,6 +26,7 @@ export class UserConfigurationComponent implements OnInit {
 
   error;
   usuario;
+  UserModel;
 
   ngOnInit(): void {
     this.getUserConfigurationData();
@@ -48,13 +49,25 @@ export class UserConfigurationComponent implements OnInit {
       createdAt: [null],
       deletedAt: [null]
     })
+
+    this.usuario = this.formBuilder.group({
+      id: [null],
+      name: [null],
+      password: [null],
+      email: [null],
+      role: [null],
+      createdAt: [null],
+      deletedAt: [null]
+    })
   }
 
   getUserConfigurationData() {
     this.userConfigurationService.getUserById().subscribe(
       (res: any) => {
+        console.log(this.usuario)
         this.usuario = res.data;
         console.log(this.usuario)
+        
 
       })
 
@@ -65,22 +78,38 @@ export class UserConfigurationComponent implements OnInit {
     const newPassword = this.userConfigurationForm.get('newPassword').value;
     const repeatPassword = this.userConfigurationForm.get('repeatPassword').value;
 
+    this.usuario.name = this.userConfigurationForm.get('name').value;
+    this.usuario.email = this.userConfigurationForm.get('email').value;
+
+
+
     //Ele quer atualizar a senha
     if (actualPassword != null && actualPassword != '') {
-      if (newPassword == repeatPassword) {
-        //Atualiza todo o usuario
+      if (actualPassword == this.usuario.password) {
+        if (newPassword == repeatPassword) {
+          
+          this.usuario.name = this.userConfigurationForm.get('name').value;
+          this.usuario.email = this.userConfigurationForm.get('email').value;
+          this.usuario.password = this.userConfigurationForm.get('newPassword').value;
+          this.userConfigurationService.updateUser(this.usuario).subscribe(res => { });
+        }
+        else {
+          alert('As senhas não coincidem');
+          window.location.reload();
+        }
       }
-      else {
-        alert('As senhas não coincidem');
-      }
+      else{
+        alert("Sua senha atual esta errada");
+        window.location.reload();
+      }      
     }
     //Ele não quer atualizar a senha
     else {
-      //Atualiza o usuario menos a senha que permanecerá a mesma
+      this.usuario.name = this.userConfigurationForm.get('name').value;
+      this.usuario.email = this.userConfigurationForm.get('email').value;
+      this.userConfigurationService.updateUser(this.usuario).subscribe(res => { });
     }
 
-
-
-
+    alert("Usuário atualizado com sucesso");
   }
 }
