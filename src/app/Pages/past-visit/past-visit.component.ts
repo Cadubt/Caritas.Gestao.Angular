@@ -44,7 +44,7 @@ export class PastVisitComponent implements OnInit {
   constructor(
     private router: Router,
     private pastVisitService: PastVistService
-  ) {}
+  ) { }
 
   visitorModel;
   Error;
@@ -63,11 +63,13 @@ export class PastVisitComponent implements OnInit {
         this.visitorModel = res.data;
 
         //Varedura na lista de visitantes
-        for (let v = 0; v < this.visitorModel.length; v++) { //CADU e um por um em diante
+        //for (let v = 0; v < this.visitorModel.length; v++) // jeito simplificado tradicional de escrever for 
+        for (let v in this.visitorModel) {// Jeito mais simplificado de escrever for //CADU e um por um em diante
           //varredura na lista de parentesco (array)
-          for (let i = 0; i < this.kinshipList.length; i++) {
+          //for (let i = 0; i < this.kinshipList.length; i++) 
+          for (let i in this.kinshipList) {
             //O Id parentesco do visitante é igual a posição do array que estou vendo agora?
-            if (this.visitorModel[v].kinshipId == this.kinshipList.indexOf(this.kinshipList[i], i)) {
+            if (this.visitorModel[v].kinshipId == this.kinshipList.indexOf(this.kinshipList[i],)) {
               //Se sim, substitua o numero kinship pelo texto kinship
               this.visitorModel[v].kinshipId = this.kinshipList[i];
             }
