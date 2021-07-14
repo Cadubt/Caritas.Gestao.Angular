@@ -10,6 +10,7 @@ import { SocialServiceComponent } from './pages/social-service/social-service.co
 import { ShelteredAppointmentsComponent } from './pages/sheltered-appointments/sheltered-appointments.component';
 import { NewShelteredComponent } from './pages/new-sheltered/new-sheltered.component';
 import { UserConfigurationComponent } from './Pages/user-configuration/user-configuration.component';
+import { UserDashboardComponent } from './Pages/user-dashboard/user-dashboard.component';
 
 
 const routes: Routes = [
@@ -62,6 +63,11 @@ const routes: Routes = [
   {
     path: 'user-configuration',
     component: UserConfigurationComponent ,
+  },
+
+  {
+    path: 'user-dashboard',
+    component: UserDashboardComponent ,
   },
 
   
