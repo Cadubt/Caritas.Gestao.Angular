@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,12 +10,11 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { MatNativeDateModule } from '@angular/material/core';
 
-import { UserDashboardComponent } from './user-dashboard.component';
-
+import { AlthorizeSheltRegisterComponent } from './althorize-shelt-register.component';
 
 
 @NgModule({
-  declarations: [UserDashboardComponent],
+  declarations: [AlthorizeSheltRegisterComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -28,7 +27,7 @@ import { UserDashboardComponent } from './user-dashboard.component';
     MatIconModule,
     MatCardSubtitle,
     MatInput,
-    MatNativeDateModule
-  ],
+    MatNativeDateModule,
+  ]
 })
-export class UserDashboardModule { }
+export class AlthorizeSheltRegisterModule { }

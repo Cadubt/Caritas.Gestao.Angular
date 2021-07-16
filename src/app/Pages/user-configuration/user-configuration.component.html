@@ -6,11 +6,11 @@
         <mat-card-content>
             <div class="send">
                 <button class="sendButton" mat-raised-button color="primary"
-                    disabled (click)="onNavigateTo('/user-dashboard')">
+                    (click)="onNavigateTo('/user-configuration')" disabled>
                     <mat-icon _ngcontent-rex-c82="" role="img"
                         class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">
-                        assignment_return"</mat-icon>
-                    Voltar
+                        person </mat-icon>
+                    Atualização de Dados
                 </button>
             </div>
         </mat-card-content>
@@ -19,7 +19,7 @@
         <mat-card-header>
             <mat-card-title>Atualize seus dados</mat-card-title>
         </mat-card-header>
-        
+
         <mat-card-content style='padding-left: 20px;'>
             <form [formGroup]="userConfigurationForm">
 
@@ -44,9 +44,10 @@
                     <input matInput placeholder={{usuario.email}} formControlName="email">
                 </mat-form-field>
 
-                
+
                 <div class="send">
-                    <button class="sendButton" mat-raised-button color="primary" (click)="onSubmit()"> Atualizar </button>
+                    <button class="sendButton" mat-raised-button color="primary" (click)="onSubmit()"> Atualizar
+                    </button>
                 </div>
 
             </form>

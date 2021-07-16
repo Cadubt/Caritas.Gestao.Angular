@@ -8,8 +8,8 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { FrontDeskComponent } from './front-desk.component';
 import { MatIconModule } from '@angular/material/icon';
+import { FrontDeskComponent } from './front-desk.component';
 
 
 

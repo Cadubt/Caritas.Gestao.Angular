@@ -11,6 +11,11 @@ import { ShelteredAppointmentsComponent } from './pages/sheltered-appointments/s
 import { NewShelteredComponent } from './pages/new-sheltered/new-sheltered.component';
 import { UserConfigurationComponent } from './Pages/user-configuration/user-configuration.component';
 import { UserDashboardComponent } from './Pages/user-dashboard/user-dashboard.component';
+import { AdminDashboardComponent } from './Pages/admin-dashboard/admin-dashboard.component';
+import { AlthorizeSheltRegisterComponent } from './pages/althorize-shelt-register/althorize-shelt-register.component';
+import { AdminConfigurationComponent } from './pages/admin-configuration/admin-configuration.component';
+import { ListUsersComponent } from './pages/list-users/list-users.component';
+import { LogInfoComponent } from './pages/log-info/log-info.component';
 
 
 const routes: Routes = [
@@ -69,6 +74,33 @@ const routes: Routes = [
     path: 'user-dashboard',
     component: UserDashboardComponent ,
   },
+
+  {
+    path: 'admin-dashboard',
+    component: AdminDashboardComponent ,
+  },
+
+  {
+    path: 'althorize-shelt-register',
+    component: AlthorizeSheltRegisterComponent,
+  },
+
+  {
+    path: 'admin-configuration',
+    component: AdminConfigurationComponent,
+  },
+
+  {
+    path: 'list-users',
+    component: ListUsersComponent,
+  },
+
+  {
+    path: 'log-info',
+    component: LogInfoComponent,
+  },
+
+
 
   
 ];
