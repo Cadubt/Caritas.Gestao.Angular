@@ -10,6 +10,10 @@ import { RecordVisitModule } from './record-visit/record-visit.module';
 import { PastVisitModule } from './past-visit/past-visit.module';
 import { ShelteredAppointmentsModule } from './sheltered-appointments/sheltered-appointments.module';
 import { NewShelteredModule } from './new-sheltered/new-sheltered.module';
+import { AdminConfigurationComponent } from './admin-configuration/admin-configuration.component';
+import { ListUsersComponent } from './list-users/list-users.component';
+import { LogInfoComponent } from './log-info/log-info.component';
+import { AlthorizeSheltRegisterComponent } from './althorize-shelt-register/althorize-shelt-register.component';
 
 
 
