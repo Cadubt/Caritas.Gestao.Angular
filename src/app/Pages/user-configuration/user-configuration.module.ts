@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { UserConfigurationComponent } from './user-configuration.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { UserConfigurationComponent } from './user-configuration.component';
     MatTableModule,
     FormsModule,
     ReactiveFormsModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class UserConfigurationModule { }

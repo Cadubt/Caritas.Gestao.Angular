@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { AdminConfigurationComponent } from './admin-configuration.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AdminConfigurationComponent } from './admin-configuration.component';
     MatCardSubtitle,
     MatInput,
     MatNativeDateModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AdminConfigurationModule { }
