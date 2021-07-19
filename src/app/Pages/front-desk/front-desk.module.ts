@@ -1,4 +1,3 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatIconModule } from '@angular/material/icon';
 import { FrontDeskComponent } from './front-desk.component';
-
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -27,5 +26,6 @@ import { FrontDeskComponent } from './front-desk.component';
     MatDatepickerModule,
     MatIconModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class FrontDeskModule { }

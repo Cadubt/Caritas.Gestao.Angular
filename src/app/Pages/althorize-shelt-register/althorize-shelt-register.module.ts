@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { AlthorizeSheltRegisterComponent } from './althorize-shelt-register.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AlthorizeSheltRegisterComponent } from './althorize-shelt-register.comp
     MatCardSubtitle,
     MatInput,
     MatNativeDateModule,
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AlthorizeSheltRegisterModule { }

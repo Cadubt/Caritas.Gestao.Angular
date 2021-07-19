@@ -26,17 +26,41 @@
     </mat-card>
     <mat-card class="card" style="min-height: 800px;">
         <mat-card-header>
-            <p>
-                <mat-card-title> Tela Administrativa</mat-card-title>
-                <mat-card-subtitle> / Adm-Configuração </mat-card-subtitle>
-            </p>
+            <mat-card-title>Atualize seus dados administrativo now</mat-card-title>
         </mat-card-header>
-        <mat-card-content>
-            <br />
-            <mat-card-subtitle>Ola {{''}}</mat-card-subtitle>
-            <mat-card-subtitle>Esta tela você poderar fazer todas as configurações com permissão de Administrador</mat-card-subtitle>
+        <mat-card-content style='padding-left: 20px;'>
+            <form [formGroup]="adminConfigurationForm">
+
+                <mat-form-field class='name'>
+                    <input matInput placeholder={{usuario.name}} formControlName="name">
+                </mat-form-field>
+
+                <mat-form-field class='currentPassword'>
+                    <input type="password" matInput placeholder="Senha Atual" formControlName="password">
+                </mat-form-field>
+
+                <mat-form-field class='newPassword'>
+                    <input type="password" matInput placeholder="Nova Senha" formControlName="newPassword">
+                </mat-form-field>
+
+                <mat-form-field class='repeatNewPassword'>
+                    <input type="password" matInput placeholder="Repita a Senha" formControlName="repeatPassword">
+                </mat-form-field>
 
 
+                <mat-form-field class='newEmail'>
+                    <input matInput placeholder={{usuario.email}} formControlName="email">
+                </mat-form-field>
+
+
+                <div class="send">
+                    <button class="sendButton" mat-raised-button color="primary" (click)="onSubmit()"> Atualizar
+                    </button>
+                </div>
+
+            </form>
         </mat-card-content>
+
+
     </mat-card>
 </div>

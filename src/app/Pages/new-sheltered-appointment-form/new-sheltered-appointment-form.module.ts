@@ -11,6 +11,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { NewShelteredAppointmentFormComponent } from './new-sheltered-appointment-form.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NewShelteredAppointmentFormComponent } from './new-sheltered-appointmen
     MatDatepickerModule,
     MatIconModule,
     MatSelectModule,
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
 export class NewShelteredAppointmentFormModule { }

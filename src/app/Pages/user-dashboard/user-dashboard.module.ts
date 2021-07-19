@@ -30,5 +30,6 @@ import { UserDashboardComponent } from './user-dashboard.component';
     MatInput,
     MatNativeDateModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class UserDashboardModule { }

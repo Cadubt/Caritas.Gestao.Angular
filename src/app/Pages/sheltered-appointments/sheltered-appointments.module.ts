@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
 import { ShelteredAppointmentsComponent } from './sheltered-appointments.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ShelteredAppointmentsComponent } from './sheltered-appointments.compone
     MatDatepickerModule,
     MatIconModule,
     MatListModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ShelteredAppointmentsModule { }

@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { LogInfoComponent } from './log-info.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 
@@ -28,6 +29,7 @@ import { LogInfoComponent } from './log-info.component';
     MatIconModule,
     MatInput,
     MatNativeDateModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class LogInfoModule { }

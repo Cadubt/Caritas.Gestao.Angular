@@ -10,6 +10,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { MatIconModule } from '@angular/material/icon';
 import { SocialServiceComponent } from './social-service.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 
@@ -27,6 +28,7 @@ import { SocialServiceComponent } from './social-service.component';
     MatButtonModule,
     MatDatepickerModule,
     MatIconModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SocialServiceModule { }

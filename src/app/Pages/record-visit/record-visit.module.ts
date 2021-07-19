@@ -11,6 +11,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { RecordVisitComponent } from './record-visit.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 
@@ -28,6 +29,7 @@ import { RecordVisitComponent } from './record-visit.component';
     MatDatepickerModule,
     MatIconModule,
     MatSelectModule,
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class RecordVisitModule { }
