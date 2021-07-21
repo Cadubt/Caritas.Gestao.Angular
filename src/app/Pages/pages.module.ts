@@ -9,6 +9,7 @@ import { RecordVisitModule } from './record-visit/record-visit.module';
 import { PastVisitModule } from './past-visit/past-visit.module';
 import { ShelteredAppointmentsModule } from './sheltered-appointments/sheltered-appointments.module';
 import { NewShelteredModule } from './new-sheltered/new-sheltered.module';
+import { UserConfigurationModule } from './user-configuration/user-configuration.module';
 
 
 
