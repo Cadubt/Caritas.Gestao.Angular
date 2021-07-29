@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +18,12 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
+import { UserDashboardModule } from './Pages/user-dashboard/user-dashboard.module';
+import { AdminDashboardModule } from './Pages/admin-dashboard/admin-dashboard.module';
+import { AlthorizeSheltRegisterModule } from './Pages/althorize-shelt-register/althorize-shelt-register.module';
+import { AdminConfigurationModule } from './Pages/admin-configuration/admin-configuration.module';
+import { ListUsersModule } from './Pages/list-users/list-users.module';
+import { LogInfoModule } from './Pages/log-info/log-info.module';
 
 @NgModule({
   declarations: [
@@ -35,14 +41,18 @@ import { MatCardModule } from '@angular/material/card';
     HttpClientModule,
     MatInputModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    UserDashboardModule,
+    AdminDashboardModule,
+    AlthorizeSheltRegisterModule,
+    AdminConfigurationModule,
+    ListUsersModule,
+    LogInfoModule
   ],
   exports: [
-    MatSidenavModule,
-    SidenavModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }, AuthService, HttpClientModule, ShelteredService, SidenavMenuService],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: []
 })
 export class AppModule { }
