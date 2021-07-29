@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserConfigurationService } from 'src/app/Core/user-Configuration.Service';
+import { UserConfigurationService } from 'src/app/Core/user-configuration.service';
 
 @Component({
   selector: 'app-user-configuration',

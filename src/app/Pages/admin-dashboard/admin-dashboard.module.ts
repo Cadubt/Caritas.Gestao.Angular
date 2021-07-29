@@ -7,11 +7,10 @@ import { MatInputModule } from '@angular/material/input';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatIconModule, MatIcon } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { AdminDashboardComponent } from './admin-dashboard.component';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 
 
@@ -29,6 +28,7 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatNativeDateModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  exports:[AdminDashboardComponent],
+  schemas: []
 })
 export class AdminDashboardModule { }

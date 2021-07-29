@@ -11,7 +11,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { ListUsersComponent } from './list-users.component';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -28,6 +27,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatIconModule,
     MatNativeDateModule
   ],
+  exports:[ListUsersComponent], 
   schemas: []
 })
 export class ListUsersModule { }

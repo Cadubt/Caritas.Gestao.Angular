@@ -26,6 +26,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatDatepickerModule,
     MatIconModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  exports:[FrontDeskComponent], 
+  schemas: []
 })
 export class FrontDeskModule { }

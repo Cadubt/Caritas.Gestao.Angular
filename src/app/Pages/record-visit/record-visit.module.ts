@@ -30,6 +30,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatIconModule,
     MatSelectModule,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  exports:[RecordVisitComponent],
+  schemas: []
 })
 export class RecordVisitModule { }

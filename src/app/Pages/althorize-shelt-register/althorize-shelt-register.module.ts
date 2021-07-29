@@ -29,6 +29,7 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatNativeDateModule,
   ],
+  exports:[AlthorizeSheltRegisterComponent],  
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AlthorizeSheltRegisterModule { }

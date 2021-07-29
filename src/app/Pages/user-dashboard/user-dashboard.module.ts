@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -30,6 +30,7 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule,
     MatNativeDateModule
   ],
+  exports:[UserDashboardComponent], 
   schemas: []
 })
 export class UserDashboardModule { }
