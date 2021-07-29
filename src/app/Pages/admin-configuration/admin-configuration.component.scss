@@ -1,0 +1,76 @@
+mat-form-field, mat-form-field-wrapper, mat-form-field-flex {
+    height: 30px;
+    margin: 15px;
+    border-radius: 2px;
+    padding: 0.2rem;
+    background-color: white;
+}
+
+.container {
+    // grid-template-columns: 1fr minmax(920px, 4fr) 1fr;
+    background-color: rgba(227, 227, 228, 0.911);
+    max-height: fit-content;
+    width: 80%;
+}
+
+.card {
+    max-height: fit-content;
+}
+
+.sendButton {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    max-height: fit-content;
+    // grid-gap: 5px;
+}
+
+//   <<<<<< FORM >>>>>>
+.name {
+    grid-column: 1/5;
+    grid-row: 1;
+  }
+  
+  .newEmail {
+    grid-column: 1/5;
+    grid-row: 2;
+  }
+  
+  .currentPassword {
+    grid-column: 1/2;
+    grid-row: 3;
+  }
+  
+  .newPassword {
+    grid-column: 1/2;
+    grid-row: 4;
+  }
+  .repeatNewPassword {
+    grid-column: 1/2;
+    grid-row: 5;
+  }
+  
+  
+  .send{
+    grid-column: 4/5;
+    grid-row: 6;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  
+  .sendButton {
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+
+@media screen and (max-width: 1700px) {
+    .container {
+        width: 90%;
+    }
+}

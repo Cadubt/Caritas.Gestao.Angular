@@ -29,3 +29,47 @@ mat-form-field, mat-form-field-wrapper, mat-form-field-flex {
   }
 
 //   <<<<<< FORM >>>>>>
+
+.name {
+  grid-column: 1/5;
+  grid-row: 1;
+}
+
+.newEmail {
+  grid-column: 1/5;
+  grid-row: 2;
+}
+
+.currentPassword {
+  grid-column: 1/2;
+  grid-row: 3;
+}
+
+.newPassword {
+  grid-column: 1/2;
+  grid-row: 4;
+}
+.repeatNewPassword {
+  grid-column: 1/2;
+  grid-row: 5;
+}
+
+
+.send{
+  grid-column: 4/5;
+  grid-row: 6;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.sendButton {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 1700px) {
+  .container{
+      width:90%;
+    }
+}
+

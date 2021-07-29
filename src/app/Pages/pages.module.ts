@@ -12,6 +12,7 @@ import { NewShelteredModule } from './new-sheltered/new-sheltered.module';
 
 
 
+
 @NgModule({
   declarations: [],
   imports: [
@@ -19,14 +20,14 @@ import { NewShelteredModule } from './new-sheltered/new-sheltered.module';
     LoginModule,
     DashboardModule,
     FrontDeskModule,
-    SocialServiceModule,    
+    SocialServiceModule,
     NewShelteredAppointmentFormModule,
     PastVisitModule,
     RecordVisitModule,
     ShelteredAppointmentsModule,
-    NewShelteredModule
+    NewShelteredModule,
   ],
-  exports:[LoginModule],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  exports:[],
+  schemas: []
 })
 export class PagesModule { }
